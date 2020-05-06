@@ -1,0 +1,230 @@
+$width: 1920px;
+$width-sm: 1170px;
+$margin-center: 0 auto;
+$pdng-reset: 0;
+$mrgn-reset: 0;
+$color-norm: #ffffff;
+$color-hover: #c7b299;
+$color-btn: #998675;
+$color-arrow: #d3c1ad;
+
+
+body 
+    margin: $margin-center;
+    width: $width;
+
+.header
+    margin: $mrgn-reset;
+    padding: 40px 0;
+    width: $width;
+    background-color: #454441;
+    background-image: url(../img/header_bg.jpg);
+    background-size: 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+.header-logomenu
+    // width: $width-sm;
+    margin: $margin-center;
+    margin-bottom: 250px;
+    display: flex;
+    justify-content: center;
+
+.header-logo
+    font-family: Raleway;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    color: $color-norm;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    &-txt
+       display: block; 
+
+.header-menu
+    display: flex;
+    align-items: center;
+
+.header-menu-list
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: $pdng-reset;
+    margin: $mrgn-reset;
+    
+    &-link
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: $color-norm;
+        text-transform: capitalize;
+        margin-left: 30px;
+            
+        &:hover
+            color: $color-hover;
+
+.header-form
+    &-btn
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+        fill: $color-norm;
+
+        &:hover
+            fill: $color-hover;
+
+    &-search-label
+        fill: $color-norm;
+
+        &:hover
+            fill: $color-hover;
+
+.header-content
+    width: $width;
+    display: flex;
+
+    &-txt
+        width: $width-sm;
+        padding: 0 290px;
+        box-sizing: border-box;
+        text-align: center;
+
+        &-h
+            margin: 0 0 15px 0;
+            font-family: Raleway;
+            font-size: 36px;
+            line-height: 1.2;
+            font-weight: 500;
+            color: $color-norm;
+            display: block;
+            text-align: center;
+
+        &-h2
+            margin: 0 0 20px 0;
+            font-family: Raleway;
+            font-size: 52px;
+            line-height: 1.2;
+            font-weight: 800;
+            color: $color-norm;
+            display: block;
+            text-align: center;
+
+        &-p
+            margin: $mrgn-reset;
+            font-family: Montserrat;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 300;
+            color: $color-norm;
+            text-align: center;
+            word-break: break-all;
+
+        &-btn
+            margin: 50px 0 0 0;
+            padding: $pdng-reset;
+            width: 170px;
+            height: 53px;
+            background-color: $color-btn;
+            border-radius: 3.0px;
+            outline: none;
+            border: none;
+            font-family: Raleway;
+            font-size: 14px;
+            line-height: 23px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: $color-norm;
+            letter-spacing: 1px;
+
+            &:hover
+                background-color: $color-hover;
+
+            &:active
+                background-color: $color-arrow;
+
+    &-arrow
+        width: ($width - $width-sm) / 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-link
+            display: block;
+            width: 40px;
+            height: 73px;
+            position: relative;
+
+            &::after
+                content: "";
+                display: inline-block;
+                width: 52px;
+                height: 52px;
+                border-bottom: 2px solid $color-arrow;
+                border-left: 2px solid $color-arrow;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 10px;
+                left: 0;
+
+            &:hover::after
+                border-bottom: 2px solid $color-hover;
+                border-left: 2px solid $color-hover;
+
+            &:active::after
+                border-bottom: 2px solid $color-btn;
+                border-left: 2px solid $color-btn;
+
+        &-link2
+            display: block;
+            width: 40px;
+            height: 73px;
+            position: relative;
+
+            &::after
+                content: "";
+                display: inline-block;
+                width: 52px;
+                height: 52px;
+                border-top: 2px solid $color-arrow;
+                border-right: 2px solid $color-arrow;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 10px;
+                left: -25px;
+
+            &:hover::after
+                border-top: 2px solid $color-hover;
+                border-right: 2px solid $color-hover;
+
+            &:active::after
+                border-top: 2px solid $color-btn;
+                border-right: 2px solid $color-btn;
+    
+.header-pagination
+    margin: 290px 0 0 0;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+
+    &-link
+        display: block;
+        width: 11px;
+        height: 11px;
+        background-color: $color-norm;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        opacity: 0.5;
+        margin-right: 11px;
+
+        &:last-child
+            margin-right: 0;
+
+        &:hover
+            background-color: transparent;
+            border: 2px solid $color-arrow;
+            transform: scale(1.2);
