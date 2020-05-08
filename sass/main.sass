@@ -7,13 +7,16 @@ $color-norm: #ffffff;
 $color-hover: #c7b299;
 $color-btn: #998675;
 $color-arrow: #d3c1ad;
+$color-bcg: #fbfaf8;
+$color-grey: #555555;
+$color-txt: #8c8c8c;
 
 @mixin txt-option 
     font-family: Montserrat;
     font-size: 14px;
     line-height: 24px;
     font-weight: 300;
-    color: #8c8c8c;
+    color: $color-txt;
 
 
 body 
@@ -250,7 +253,7 @@ body
 
     &-item
         
-        margin-top: 95px;
+        margin: 95px 0 80px 0;
         width: ($width-sm - 105px) / 4;
         display: flex;
         flex-direction: column;
@@ -274,9 +277,18 @@ body
         &:hover .main-options-item-svg
             fill: $color-hover;
         
+        &:active:after
+            background-color: $color-btn;
+
+        &:active .main-options-item-h
+            color: $color-btn;
+
+        &:active .main-options-item-svg
+            fill: $color-btn;
+
         &-svg
             margin: 0 0 32px 0;
-            fill: #555555;
+            fill: $color-grey;
             display: block;
 
         &-h
@@ -284,7 +296,7 @@ body
             font-size: 22px;
             line-height: 1.2;
             font-weight: 600;
-            color: #555555;
+            color: $color-grey;
             text-transform: capitalize;
 
         &-txt
@@ -293,5 +305,62 @@ body
             @include txt-option;
             text-align: center;
 
+.main-presentation
+    margin: $margin-center;
+    padding: 85px 0 0 0;
+    width: $width;
+    text-align: center;
+    background-color: $color-bcg;
 
+    &-wrp
+        margin: $margin-center;
+        width: $width-sm;
+        position: relative;
+
+    &-p
+        font-family: Raleway;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: $color-grey;
+
+    &-txt
+        margin: 25px auto 40px auto;
+        display: block;
+        max-width: 757px;
+        font-family: Montserrat;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 300;
+        color: $color-txt;
+
+    &-img-photo:first-of-type
+        position: absolute;
+        top: 324px;
+        left: -28px;
+        z-index: -1;
+
+    &-img-photo:nth-of-type(2)
+        position: absolute;
+        top: 242px;
+        left: 200px;
+        z-index: 1;
+
+    &-img-photo:last-of-type
+        position: absolute;
+        top: 324px;
+        left: 430px;
+        z-index: -2;
+
+.clearfix:before, .clearfix:after
+        content: "\0020";
+        display: block;
+        height: 0;
+        visibility: hidden; 
+
+.clearfix:after
+    clear: both;
+
+.clearfix
+    zoom: 1;
 
