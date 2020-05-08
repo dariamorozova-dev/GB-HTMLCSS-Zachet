@@ -8,6 +8,13 @@ $color-hover: #c7b299;
 $color-btn: #998675;
 $color-arrow: #d3c1ad;
 
+@mixin txt-option 
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #8c8c8c;
+
 
 body 
     margin: $margin-center;
@@ -228,3 +235,63 @@ body
             background-color: transparent;
             border: 2px solid $color-arrow;
             transform: scale(1.2);
+
+.main-content
+    margin: $margin-center;
+    padding: $pdng-reset;
+    width: $width;
+
+.main-options
+    margin: $margin-center;
+    width: $width-sm;
+    display: flex;
+    justify-content: space-between;
+    // align-items: flex-end;
+
+    &-item
+        
+        margin-top: 95px;
+        width: ($width-sm - 105px) / 4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::after
+            content: "";
+            display: block;
+            width: 100px;
+            height: 5px;
+            background-color: transparent;
+            margin: 0 auto;
+            align-self: flex-end;
+
+        &:hover:after
+            background-color: $color-hover;
+
+        &:hover .main-options-item-h
+            color: $color-hover;
+
+        &:hover .main-options-item-svg
+            fill: $color-hover;
+        
+        &-svg
+            margin: 0 0 32px 0;
+            fill: #555555;
+            display: block;
+
+        &-h
+            font-family: Raleway;
+            font-size: 22px;
+            line-height: 1.2;
+            font-weight: 600;
+            color: #555555;
+            text-transform: capitalize;
+
+        &-txt
+            margin: $mrgn-reset;
+            margin: 20px 0 35px 0;
+            @include txt-option;
+            text-align: center;
+
+
+
