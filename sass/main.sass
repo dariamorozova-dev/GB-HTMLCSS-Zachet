@@ -309,13 +309,13 @@ body
     margin: $margin-center;
     padding: 85px 0 0 0;
     width: $width;
+    height: 637px; //clearfix&alt doesn't works
     text-align: center;
     background-color: $color-bcg;
 
     &-wrp
         margin: $margin-center;
         width: $width-sm;
-        position: relative;
 
     &-p
         font-family: Raleway;
@@ -334,33 +334,28 @@ body
         font-weight: 300;
         color: $color-txt;
 
-    &-img-photo:first-of-type
-        position: absolute;
-        top: 324px;
-        left: -28px;
-        z-index: -1;
+    &-img
+        display: flex;
+        justify-content: center;
+        background-color: orange;
+        position: relative;
 
-    &-img-photo:nth-of-type(2)
-        position: absolute;
-        top: 242px;
-        left: 200px;
-        z-index: 1;
+        &-photo:first-of-type
+            position: absolute;
+            top: 82px;
+            left: -31px;
+            z-index: 1;
 
-    &-img-photo:last-of-type
-        position: absolute;
-        top: 324px;
-        left: 430px;
-        z-index: -2;
+        &-photo:nth-of-type(2)
+            position: absolute;
+            margin: 0 auto;
+            z-index: 2;
 
-.clearfix:before, .clearfix:after
-        content: "\0020";
-        display: block;
-        height: 0;
-        visibility: hidden; 
+        &-photo:last-of-type
+            position: absolute;
+            top: 82px;
+            left: 430px;
+            z-index: 1;
 
-.clearfix:after
-    clear: both;
 
-.clearfix
-    zoom: 1;
 
