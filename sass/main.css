@@ -80,12 +80,17 @@ body {
   color: #c7b299;
 }
 
+.header-menu-list-link:active {
+  color: #d3c1ad;
+}
+
 .header-form-btn {
   background-color: transparent;
   border: none;
-  margin: 0;
+  margin: 0 30px 0 65px;
   padding: 0;
   fill: #ffffff;
+  outline: none;
 }
 
 .header-form-btn:hover {
@@ -94,10 +99,31 @@ body {
 
 .header-form-search-label {
   fill: #ffffff;
+  position: relative;
 }
 
 .header-form-search-label:hover {
   fill: #c7b299;
+}
+
+.header-form-input {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 18px;
+  height: 30px;
+  z-index: -2;
+  outline: none;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.header-form-input:focus {
+  z-index: 1;
+  width: 300px;
+  -webkit-transition: width 1s ease-out;
+  transition: width 1s ease-out;
 }
 
 .header-content {
@@ -283,6 +309,13 @@ body {
           transform: scale(1.2);
 }
 
+.header-pagination-link:active {
+  background-color: transparent;
+  border: 2px solid #998675;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .main-content {
   margin: 0 auto;
   padding: 0;
@@ -438,5 +471,75 @@ body {
   top: 82px;
   left: 430px;
   z-index: 1;
+}
+
+.main-ad {
+  width: 1920px;
+  background-color: #f4f5f8;
+  background-image: -webkit-gradient(linear, left top, right top, from(#211b19), to(#4e3427));
+  background-image: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+}
+
+.main-ad-content {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-ad-txt {
+  width: 80%;
+}
+
+.main-ad-txt-offer {
+  font-family: Raleway;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.main-ad-txt-offer-companyname {
+  color: #c7b299;
+}
+
+.main-ad-txt-desc {
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #615855;
+}
+
+.main-ad-btn {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  width: 170px;
+  height: 50px;
+  background-color: #998675;
+  border-radius: 3.0px;
+  font-family: Raleway;
+  font-size: 14px;
+  line-height: 23px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.main-ad-btn:hover {
+  background-color: #c7b299;
+}
+
+.main-ad-btn:active {
+  background-color: #d3c1ad;
 }
 /*# sourceMappingURL=main.css.map */

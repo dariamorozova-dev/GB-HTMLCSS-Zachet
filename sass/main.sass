@@ -76,23 +76,44 @@ body
             
         &:hover
             color: $color-hover;
+        &:active
+            color: $color-arrow;
 
 .header-form
     &-btn
         background-color: transparent;
         border: none;
-        margin: 0;
+        margin: 0 30px 0 65px;
         padding: 0;
         fill: $color-norm;
+        outline: none;
 
         &:hover
             fill: $color-hover;
 
     &-search-label
         fill: $color-norm;
+        position: relative;
 
         &:hover
             fill: $color-hover;
+
+    &-input
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 18px;
+        height: 30px;
+        z-index: -2;
+        outline: none;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+
+        &:focus
+            z-index: 1;
+            width: 300px;
+            transition: width 1s ease-out;
 
 .header-content
     width: $width;
@@ -238,6 +259,11 @@ body
             background-color: transparent;
             border: 2px solid $color-arrow;
             transform: scale(1.2);
+        
+        &:active
+            background-color: transparent;
+            border: 2px solid $color-btn;
+            transform: scale(1.2);
 
 .main-content
     margin: $margin-center;
@@ -356,6 +382,62 @@ body
             top: 82px;
             left: 430px;
             z-index: 1;
+
+.main-ad
+    width: $width;
+    background-color: #f4f5f8;
+    background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%);
+
+    &-content
+        width: $width-sm;
+        margin: $margin-center;
+        padding: 50px 0;
+        display: flex;
+        justify-content: space-between;
+    
+    &-txt
+        width: 80%;
+
+        &-offer
+            font-family: Raleway;
+            font-size: 28px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: $color-norm;
+            text-transform: capitalize;
+
+            &-companyname
+                color: $color-hover;
+        
+        &-desc
+            margin: $mrgn-reset;
+            font-family: Montserrat;
+            font-size: 18px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #615855;
+
+    &-btn
+        margin: $mrgn-reset;
+        padding: $pdng-reset;
+        outline: none;
+        border: none;
+        width: 170px;
+        height: 50px;
+        background-color: #998675;
+        border-radius: 3.0px;
+        font-family: Raleway;
+        font-size: 14px;
+        line-height: 23px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: $color-norm;
+
+        &:hover
+            background-color: $color-hover;
+
+        &:active
+            background-color: $color-arrow;
 
 
 
