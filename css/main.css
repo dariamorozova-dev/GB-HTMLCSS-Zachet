@@ -40,6 +40,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  fill: #ffffff;
 }
 
 .header-logo-txt {
@@ -200,23 +201,10 @@ body {
   background-color: #d3c1ad;
 }
 
-.header-content-arrow {
-  width: 375px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .header-content-arrow-link {
   display: block;
-  width: 40px;
-  height: 73px;
+  width: 375px;
+  height: 290px;
   position: relative;
 }
 
@@ -230,8 +218,8 @@ body {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   position: absolute;
-  top: 10px;
-  left: 0;
+  top: 44%;
+  left: 50%;
 }
 
 .header-content-arrow-link:hover::after {
@@ -246,8 +234,8 @@ body {
 
 .header-content-arrow-link2 {
   display: block;
-  width: 40px;
-  height: 73px;
+  width: 375px;
+  height: 290px;
   position: relative;
 }
 
@@ -261,8 +249,8 @@ body {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   position: absolute;
-  top: 10px;
-  left: -25px;
+  top: 44%;
+  left: 50%;
 }
 
 .header-content-arrow-link2:hover::after {
@@ -449,7 +437,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: orange;
   position: relative;
 }
 
@@ -461,7 +448,6 @@ body {
 }
 
 .main-presentation-img-photo:nth-of-type(2) {
-  position: absolute;
   margin: 0 auto;
   z-index: 2;
 }
