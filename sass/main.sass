@@ -52,8 +52,15 @@ body
     display: flex;
     align-items: center;
     fill: $color-norm;
+    
     &-txt
        display: block; 
+
+    &:hover 
+        fill: $color-hover;
+
+    &:hover .header-logo-txt
+        color: $color-hover;
 
 .header-menu
     display: flex;

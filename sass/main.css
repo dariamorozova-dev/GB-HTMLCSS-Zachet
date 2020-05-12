@@ -47,6 +47,14 @@ body {
   display: block;
 }
 
+.header-logo:hover {
+  fill: #c7b299;
+}
+
+.header-logo:hover .header-logo-txt {
+  color: #c7b299;
+}
+
 .header-menu {
   display: -webkit-box;
   display: -ms-flexbox;
