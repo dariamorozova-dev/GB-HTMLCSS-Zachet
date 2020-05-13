@@ -804,6 +804,127 @@ body
             text-transform: uppercase;
             color: $color-hover;
 
+.main-recent-posts
+    margin: $margin-center;
+    width: $width-sm;
+    text-align: center;
+
+    &-title
+        display: block;
+        margin: 80px 0 30px 0;
+        text-transform: capitalize;
+        font-family: Raleway;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: $color-grey;
+
+    &-txt
+        margin: 0 auto 40px;
+        max-width: 770px;
+        font-family: Montserrat;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 300;
+        color: $color-txt;
+
+    &-wrp
+        display: flex;
+        justify-content: space-around;
+
+    &-article
+        text-align: start;
+        position: relative;
+        border: 1px solid #f8f8f8;
+        max-width: 370px;
+
+        &:hover .main-recent-posts-article-txt
+            background-color: #362f2d;
+
+        &:hover .main-recent-posts-article-txt-title
+            color: $color-hover;
+
+        &:hover .main-recent-posts-article-txt-desc
+            color: $color-norm;
+
+        &:hover .main-recent-posts-article-photo-img
+            filter: brightness(0.5);
+
+        &:hover .main-recent-posts-article-link:hover
+            color: $color-bcg;
+            fill: $color-bcg;
+
+        &:active .main-recent-posts-article-link:active
+            color: $color-grey;
+            fill: $color-grey;
+
+
+        &-photo
+            margin: 0;
+
+            &-img
+
+            &-pgn
+                margin: 0 0 0 0;
+                position: absolute;
+                top: 45%;
+                left: 40%;
+                display: flex;
+                justify-content: center;
+                box-sizing: border-box;
+
+                &-link
+                    display: block;
+                    width: 7px;
+                    height: 7px;
+                    background-color: $color-norm;
+                    border-radius: 50%;
+                    border: 2px solid transparent;
+                    opacity: 0.5;
+                    margin-right: 11px;
+
+                    &:last-child
+                        margin-right: 0;
+
+                    &:hover
+                        background-color: transparent;
+                        border: 2px solid $color-hover;
+                        transform: scale(1.2);
+                    
+                    &:active
+                        background-color: transparent;
+                        border: 2px solid $color-btn;
+                        transform: scale(1.2);
+
+        &-txt
+            margin-top: -4px;
+            padding: 30px 0 35px 30px;
+
+            &-title
+                font-family: Raleway;
+                font-size: 20px;
+                line-height: 1.2;
+                font-weight: 500;
+                color: $color-grey;
+            &-desc
+                font-family: Montserrat;
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 300;
+                color: $color-txt;
+
+        &-link
+            text-decoration: none;
+            font-family: Montserrat;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 300;
+            color: $color-hover;
+            text-transform: capitalize;
+            fill: $color-hover;
+
+            
+
 
 
 

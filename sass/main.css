@@ -1013,4 +1013,153 @@ body {
   text-transform: uppercase;
   color: #c7b299;
 }
+
+.main-recent-posts {
+  margin: 0 auto;
+  width: 1170px;
+  text-align: center;
+}
+
+.main-recent-posts-title {
+  display: block;
+  margin: 80px 0 30px 0;
+  text-transform: capitalize;
+  font-family: Raleway;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #555555;
+}
+
+.main-recent-posts-txt {
+  margin: 0 auto 40px;
+  max-width: 770px;
+  font-family: Montserrat;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #8c8c8c;
+}
+
+.main-recent-posts-wrp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main-recent-posts-article {
+  text-align: start;
+  position: relative;
+  border: 1px solid #f8f8f8;
+  max-width: 370px;
+}
+
+.main-recent-posts-article:hover .main-recent-posts-article-txt {
+  background-color: #362f2d;
+}
+
+.main-recent-posts-article:hover .main-recent-posts-article-txt-title {
+  color: #c7b299;
+}
+
+.main-recent-posts-article:hover .main-recent-posts-article-txt-desc {
+  color: #ffffff;
+}
+
+.main-recent-posts-article:hover .main-recent-posts-article-photo-img {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+.main-recent-posts-article:hover .main-recent-posts-article-link:hover {
+  color: #fbfaf8;
+  fill: #fbfaf8;
+}
+
+.main-recent-posts-article:active .main-recent-posts-article-link:active {
+  color: #555555;
+  fill: #555555;
+}
+
+.main-recent-posts-article-photo {
+  margin: 0;
+}
+
+.main-recent-posts-article-photo-pgn {
+  margin: 0 0 0 0;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main-recent-posts-article-photo-pgn-link {
+  display: block;
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  opacity: 0.5;
+  margin-right: 11px;
+}
+
+.main-recent-posts-article-photo-pgn-link:last-child {
+  margin-right: 0;
+}
+
+.main-recent-posts-article-photo-pgn-link:hover {
+  background-color: transparent;
+  border: 2px solid #c7b299;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.main-recent-posts-article-photo-pgn-link:active {
+  background-color: transparent;
+  border: 2px solid #998675;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.main-recent-posts-article-txt {
+  margin-top: -4px;
+  padding: 30px 0 35px 30px;
+}
+
+.main-recent-posts-article-txt-title {
+  font-family: Raleway;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #555555;
+}
+
+.main-recent-posts-article-txt-desc {
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #8c8c8c;
+}
+
+.main-recent-posts-article-link {
+  text-decoration: none;
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #c7b299;
+  text-transform: capitalize;
+  fill: #c7b299;
+}
 /*# sourceMappingURL=main.css.map */
