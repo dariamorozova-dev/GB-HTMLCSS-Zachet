@@ -623,6 +623,83 @@ body
             background-color: $color-btn;
             color: $color-hover;
 
+.main-video
+    width: $width;
+    margin: $margin-center;
+    max-height: 705px;
+    overflow: hidden;
+    position: relative;
+    // background-image: url(img/bg_photo_video.jpg)
+
+    &-videofile
+        margin: -90px 0px 0px 0px;
+        filter: brightness(50%);
+    
+    &-content
+        width: $width;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 705px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        &-btn
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border: none;
+            border-radius: 50%;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.2);
+
+            &:hover
+                background-color: rgba(255, 255, 255, 0.2);
+
+            &:hover .main-video-content-icon
+                fill: $color-hover;
+
+            &:active
+                background-color: rgba(255, 255, 255, 0.2);
+
+            &:active .main-video-content-icon
+                fill: $color-txt;
+
+        &-icon
+            margin: auto;
+            fill: $color-norm;
+
+        &-title
+            margin: 45px 0 30px 0;
+            font-family: Raleway;
+            font-size: 30px;
+            line-height: 1.2;
+            font-weight: 500;
+            color: $color-norm;
+            text-transform: capitalize;
+
+        &-txt
+            margin: $mrgn-reset;
+            max-width: 560px;
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: 300;
+            color: $color-norm;
+
+        &-time
+            margin: 45px 0 0 0;
+            font-family: Montserrat;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            color: $color-hover;
+
 
 
 
