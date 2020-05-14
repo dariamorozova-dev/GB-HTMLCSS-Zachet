@@ -965,7 +965,29 @@ body
             text-transform: capitalize;
             fill: $color-hover;
 
-            
+.main-partners
+    width: $width;
+    min-height: 489px;
+    margin: $margin-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/partners-bg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    &-link
+        margin: 0 45px 0 45px;
+        display: block;
+        text-decoration: none;
+
+        &:hover .main-partners-link-logo
+            filter: drop-shadow(9px -3px 3px black);
+
+        &:active .main-partners-link-logo
+            filter: drop-shadow(9px -3px 3px black);
+            filter: brightness(0.5);
+
 
 
 

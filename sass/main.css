@@ -1212,4 +1212,40 @@ body {
   text-transform: capitalize;
   fill: #c7b299;
 }
+
+.main-partners {
+  width: 1920px;
+  min-height: 489px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../img/partners-bg.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.main-partners-link {
+  margin: 0 45px 0 45px;
+  display: block;
+  text-decoration: none;
+}
+
+.main-partners-link:hover .main-partners-link-logo {
+  -webkit-filter: drop-shadow(9px -3px 3px black);
+          filter: drop-shadow(9px -3px 3px black);
+}
+
+.main-partners-link:active .main-partners-link-logo {
+  -webkit-filter: drop-shadow(9px -3px 3px black);
+          filter: drop-shadow(9px -3px 3px black);
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
 /*# sourceMappingURL=main.css.map */
