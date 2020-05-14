@@ -1213,6 +1213,26 @@ body {
   fill: #c7b299;
 }
 
+.main-recent-posts-wrp-btns {
+  margin: 40px 0 80px 0;
+}
+
+.main-recent-posts-btn-l, .main-recent-posts-btn-r {
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  fill: #d1d1d1;
+}
+
+.main-recent-posts-btn-l:hover, .main-recent-posts-btn-r:hover {
+  fill: #c7b299;
+}
+
+.main-recent-posts-btn-l:active, .main-recent-posts-btn-r:active {
+  fill: #555555;
+}
+
 .main-partners {
   width: 1920px;
   min-height: 489px;
