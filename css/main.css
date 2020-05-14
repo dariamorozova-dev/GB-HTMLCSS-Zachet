@@ -1083,6 +1083,14 @@ body {
   fill: #555555;
 }
 
+.main-recent-posts-article:hover .main-recent-posts-article-date {
+  background-color: #c7b299;
+}
+
+.main-recent-posts-article:hover .main-recent-posts-article-month {
+  background-color: #a48d72;
+}
+
 .main-recent-posts-article-photo {
   margin: 0;
 }
@@ -1129,6 +1137,48 @@ body {
   border: 2px solid #998675;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.main-recent-posts-article-wrp-date {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.main-recent-posts-article-date, .main-recent-posts-article-month {
+  display: block;
+}
+
+.main-recent-posts-article-date {
+  text-align: center;
+  padding-top: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50px;
+  height: 35px;
+  background-color: #363636;
+  border-radius: 3.0px 3.0px 0.0px 0.0px;
+  font-family: Montserrat;
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.main-recent-posts-article-month {
+  width: 50px;
+  height: 25px;
+  background-color: #252525;
+  border-radius: 0.0px 0.0px 3.0px 3.0px;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .main-recent-posts-article-txt {
