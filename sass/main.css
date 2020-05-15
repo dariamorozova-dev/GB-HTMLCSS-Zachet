@@ -992,11 +992,7 @@ body {
       align-self: flex-end;
 }
 
-.main-numbers-desc {
-  margin: 0 0 30px 0;
-}
-
-.main-numbers-desc-num {
+.main-numbers-num {
   display: block;
   margin: 30px 0 20px 0;
   font-family: Montserrat;
@@ -1006,7 +1002,9 @@ body {
   color: #ffffff;
 }
 
-.main-numbers-desc-txt {
+.main-numbers-txt {
+  display: block;
+  margin: 0 0 30px 0;
   font-family: Montserrat;
   font-size: 14px;
   line-height: 20px;
