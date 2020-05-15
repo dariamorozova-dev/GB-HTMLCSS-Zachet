@@ -75,7 +75,7 @@ body {
   margin: 0;
 }
 
-.header-menu-list-link {
+.header-menu-list-link-link {
   font-family: Montserrat;
   font-size: 14px;
   line-height: 1.2;
@@ -83,13 +83,14 @@ body {
   color: #ffffff;
   text-transform: capitalize;
   margin-left: 30px;
+  text-decoration: none;
 }
 
-.header-menu-list-link:hover {
+.header-menu-list-link-link:hover {
   color: #c7b299;
 }
 
-.header-menu-list-link:active {
+.header-menu-list-link-link:active {
   color: #d3c1ad;
 }
 
