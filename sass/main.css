@@ -55,6 +55,14 @@ body {
   color: #c7b299;
 }
 
+.header-logo:active {
+  fill: #8c8c8c;
+}
+
+.header-logo:active .header-logo-txt {
+  color: #8c8c8c;
+}
+
 .header-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1292,6 +1300,7 @@ body {
 }
 
 .footer-content-column {
+  margin: 30px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1308,6 +1317,7 @@ body {
 }
 
 .footer-content-column-widget {
+  margin: 30px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1335,11 +1345,16 @@ body {
 
 .footer-content-article {
   margin: 0;
+  display: inline;
   font-family: Montserrat;
   font-size: 14px;
   line-height: 20px;
   font-weight: 300;
   color: #555555;
+}
+
+.footer-content-date {
+  display: block;
 }
 
 .footer-content-date-txt {
@@ -1350,16 +1365,35 @@ body {
   color: #363636;
 }
 
-.footer-content-twitter-name {
+.footer-content-twitter-twitt-name-link {
   color: #00bff3;
 }
 
 .footer-content-links {
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
   color: #959595;
+  text-decoration: none;
 }
 
 .footer-content-about {
   max-width: 258px;
+}
+
+.footer-content-about-read-more {
+  margin: 35px 0 0 0;
+}
+
+.footer-content-about-read-more:hover {
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.footer-content-about-read-more:active {
+  color: #8c8c8c;
+  fill: #8c8c8c;
 }
 
 .footer-content-about-txt {
@@ -1375,6 +1409,24 @@ body {
   max-width: 271px;
 }
 
+.footer-content-recent-posts-item:first-of-type::after {
+  content: "";
+  display: block;
+  width: 270px;
+  height: 2px;
+  background-color: #252525;
+  margin: 20px auto;
+}
+
+.footer-content-recent-posts-item:nth-of-type(2)::after {
+  content: "";
+  display: block;
+  width: 270px;
+  height: 2px;
+  background-color: #252525;
+  margin: 20px auto;
+}
+
 .footer-content-recent-posts-item-link {
   display: block;
   text-decoration: none;
@@ -1382,6 +1434,56 @@ body {
 
 .footer-content-twitter {
   max-width: 272px;
+}
+
+.footer-content-twitter-twitt:hover .footer-content-article {
+  color: #c7b299;
+}
+
+.footer-content-twitter-twitt:hover .footer-content-links {
+  color: #C666C9;
+}
+
+.footer-content-twitter-twitt:hover .footer-content-twitter-twitt-name-link {
+  color: #C666C9;
+}
+
+.footer-content-twitter-twitt:hover .footer-content-twitter-twitt-name-link:hover {
+  color: #72059E;
+}
+
+.footer-content-twitter-twitt:hover .footer-content-twitter-twitt-name-link:active {
+  color: #9C6AB0;
+}
+
+.footer-content-twitter-twitt:active .footer-content-article {
+  color: #8c8c8c;
+}
+
+.footer-content-twitter-twitt:hover .footer-content-links:hover {
+  color: #72059E;
+}
+
+.footer-content-twitter-twitt:hover .footer-content-links:active {
+  color: #9C6AB0;
+}
+
+.footer-content-twitter-twitt:first-of-type::after {
+  content: "";
+  display: block;
+  width: 270px;
+  height: 2px;
+  background-color: #252525;
+  margin: 20px auto;
+}
+
+.footer-content-twitter-twitt:nth-of-type(2)::after {
+  content: "";
+  display: block;
+  width: 270px;
+  height: 2px;
+  background-color: #252525;
+  margin: 20px auto;
 }
 
 .footer-content-twitter-twitt-link {
@@ -1410,10 +1512,14 @@ body {
 }
 
 .footer-item {
-  margin: 0 30px 0 0;
+  margin: 80px 30px 80px 0;
 }
 
 .footer-item:last-of-type {
-  margin: 0;
+  margin: 80px 0 80px 0;
+}
+
+.footer-item:first-of-type {
+  margin: 63px 0 80px 0;
 }
 /*# sourceMappingURL=main.css.map */

@@ -10,6 +10,9 @@ $color-arrow: #d3c1ad;
 $color-bcg: #fbfaf8;
 $color-grey: #555555;
 $color-txt: #8c8c8c;
+$color-viol-dark: #72059E;
+$color-viol-light: #9C6AB0;
+$color-pink: #C666C9;
 
 @mixin txt-option 
     font-family: Montserrat;
@@ -61,6 +64,12 @@ body
 
     &:hover .header-logo-txt
         color: $color-hover;
+
+    &:active 
+        fill: $color-txt;
+
+    &:active .header-logo-txt
+        color: $color-txt;
 
 .header-menu
     display: flex;
@@ -1017,13 +1026,15 @@ body
     display: flex;
     justify-content: center;
 
-    &-column //все колонки
+    &-column //колонки
+        margin: 30px 0 0 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
 
     &-column-widget
+        margin: 30px 0 0 0;
         display: flex;
         justify-content: space-between;
         align-items: space-between;
@@ -1042,6 +1053,7 @@ body
 
     &-article //весь серый текст в колонках
         margin: $mrgn-reset;
+        display: inline;
         font-family: Montserrat;
         font-size: 14px;
         line-height: 20px;
@@ -1049,6 +1061,7 @@ body
         color: $color-grey;
 
     &-date //все тэги времени
+        display: block;
         &-txt //весь текст в тэгах времени
             font-family: Montserrat;
             font-size: 12px;
@@ -1056,15 +1069,31 @@ body
             font-weight: 300;
             color: #363636;
 
-    &-twitter-name
+    &-twitter-twitt-name-link
         color: #00bff3;
     
     &-links
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
         color: #959595;
+        text-decoration: none;
 
     &-about
         max-width: 258px;
 
+        &-read-more
+            margin: 35px 0 0 0;
+
+        &-read-more:hover
+            color: $color-norm;
+            fill: $color-norm;
+
+        &-read-more:active
+            color: $color-txt;
+            fill: $color-txt;
+        
         &-txt
             margin: $mrgn-reset;
             font-family: Montserrat;
@@ -1076,6 +1105,26 @@ body
     &-recent-posts
         max-width: 271px;
 
+        &-item:first-of-type::after
+            content: "";
+            display: block;
+            width: 270px;
+            height: 2px;
+            background-color: #252525;
+            margin: 20px auto;
+            // -ms-flex-item-align: end;
+            // align-self: flex-end;
+        
+        &-item:nth-of-type(2)::after
+            content: "";
+            display: block;
+            width: 270px;
+            height: 2px;
+            background-color: #252525;
+            margin: 20px auto;
+            // -ms-flex-item-align: end;
+            // align-self: flex-end;
+
         &-item-link
             display: block;
             text-decoration: none;
@@ -1083,8 +1132,55 @@ body
     &-twitter
         max-width: 272px;
 
+        &-twitt:hover .footer-content-article
+            color: $color-hover;
+
+        &-twitt:hover .footer-content-links
+           color: $color-pink;
+
+        &-twitt:hover .footer-content-twitter-twitt-name-link
+            color: $color-pink;
+
+        &-twitt:hover .footer-content-twitter-twitt-name-link:hover
+            color: $color-viol-dark;
+
+        &-twitt:hover .footer-content-twitter-twitt-name-link:active
+            color: $color-viol-light;
+
+        &-twitt:active .footer-content-article
+            color: $color-txt;
+
+        &-twitt:hover .footer-content-links:hover
+            color: $color-viol-dark;
+
+        &-twitt:hover .footer-content-links:active
+            color: $color-viol-light;
+
+        &-twitt:first-of-type::after
+            content: "";
+            display: block;
+            width: 270px;
+            height: 2px;
+            background-color: #252525;
+            margin: 20px auto;
+            // -ms-flex-item-align: end;
+            // align-self: flex-end;
+        
+        &-twitt:nth-of-type(2)::after
+            content: "";
+            display: block;
+            width: 270px;
+            height: 2px;
+            background-color: #252525;
+            margin: 20px auto;
+            // -ms-flex-item-align: end;
+            // align-self: flex-end;
+
         &-twitt-link
             text-decoration: none;
+
+            // &:hover
+            //     color: red;
 
         &-twitt-name-link
             text-decoration: none;
@@ -1104,11 +1200,13 @@ body
     text-decoration: none;
 
 .footer-item
-    margin: 0 30px 0 0;
+    margin: 80px 30px 80px 0;
 
     &:last-of-type
-        margin: 0;
-        
+        margin: 80px 0 80px 0;
+
+    &:first-of-type
+        margin: 63px 0 80px 0;
 
 
 
