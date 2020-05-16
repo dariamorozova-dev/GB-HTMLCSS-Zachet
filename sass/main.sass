@@ -1008,6 +1008,94 @@ body
             filter: drop-shadow(9px -3px 3px black);
             filter: brightness(0.5);
 
+.footer-main
+    margin: $margin-center;
+    width: $width;
+    background-color: #191919;
+
+.footer-content
+    display: flex;
+    justify-content: center;
+
+    &-column //все колонки
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+    &-column-widget
+        display: flex;
+        justify-content: space-between;
+        align-items: space-between;
+        flex-wrap: wrap;
+        max-width: 271px;
+
+    &-title //все заголовки
+        display: block;
+        text-align: center;
+        font-family: Raleway;
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: $color-norm;
+        text-transform: capitalize;
+
+    &-article //весь серый текст в колонках
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        color: $color-grey;
+
+    &-date //все тэги времени
+        &-txt //весь текст в тэгах времени
+            font-family: Montserrat;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 300;
+            color: #363636;
+
+    &-twitter-name
+        color: #00bff3;
+    
+    &-links
+        color: #959595;
+
+    &-about
+        max-width: 258px;
+
+        &-txt
+            margin: $mrgn-reset;
+            font-family: Montserrat;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 300;
+            color: $color-grey;
+
+    &-recent-posts
+        max-width: 271px;
+
+        &-item-link
+            display: block;
+            text-decoration: none;
+
+    &-twitter
+        max-width: 272px;
+
+        &-twitt-link
+            text-decoration: none;
+
+        &-twitt-name-link
+            text-decoration: none;
+
+.footer-content-twitter-twitt-link
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    color: $color-grey;
+    text-decoration: none;
+
 
 
 
