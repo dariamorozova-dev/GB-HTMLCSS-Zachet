@@ -1291,6 +1291,8 @@ body {
 }
 
 .footer-content {
+  width: 1920px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1387,13 +1389,13 @@ body {
 }
 
 .footer-content-about-read-more:hover {
-  color: #ffffff;
-  fill: #ffffff;
+  color: #C666C9;
+  fill: #C666C9;
 }
 
 .footer-content-about-read-more:active {
-  color: #8c8c8c;
-  fill: #8c8c8c;
+  color: #9C6AB0;
+  fill: #9C6AB0;
 }
 
 .footer-content-about-txt {
@@ -1536,6 +1538,6 @@ body {
 }
 
 .footer-item:first-of-type {
-  margin: 63px 0 80px 0;
+  margin: 63px 30px 80px 0;
 }
 /*# sourceMappingURL=main.css.map */
