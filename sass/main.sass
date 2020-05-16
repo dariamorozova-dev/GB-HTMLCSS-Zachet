@@ -214,10 +214,12 @@ body
             &:hover::after
                 border-bottom: 2px solid $color-hover;
                 border-left: 2px solid $color-hover;
+                filter: drop-shadow(8px 8px 2px black);
 
             &:active::after
                 border-bottom: 2px solid $color-btn;
                 border-left: 2px solid $color-btn;
+                filter: drop-shadow(8px 8px 2px $color-arrow);
 
         &-link2
             display: block;
@@ -240,10 +242,12 @@ body
             &:hover::after
                 border-top: 2px solid $color-hover;
                 border-right: 2px solid $color-hover;
+                filter: drop-shadow(8px 8px 2px black);
 
             &:active::after
                 border-top: 2px solid $color-btn;
                 border-right: 2px solid $color-btn;
+                filter: drop-shadow(8px 8px 2px $color-arrow);
     
 .header-pagination
     margin: 290px 0 0 0;

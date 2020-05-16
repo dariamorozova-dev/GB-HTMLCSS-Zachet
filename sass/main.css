@@ -234,11 +234,15 @@ body {
 .header-content-arrow-link:hover::after {
   border-bottom: 2px solid #c7b299;
   border-left: 2px solid #c7b299;
+  -webkit-filter: drop-shadow(8px 8px 2px black);
+          filter: drop-shadow(8px 8px 2px black);
 }
 
 .header-content-arrow-link:active::after {
   border-bottom: 2px solid #998675;
   border-left: 2px solid #998675;
+  -webkit-filter: drop-shadow(8px 8px 2px #d3c1ad);
+          filter: drop-shadow(8px 8px 2px #d3c1ad);
 }
 
 .header-content-arrow-link2 {
@@ -265,11 +269,15 @@ body {
 .header-content-arrow-link2:hover::after {
   border-top: 2px solid #c7b299;
   border-right: 2px solid #c7b299;
+  -webkit-filter: drop-shadow(8px 8px 2px black);
+          filter: drop-shadow(8px 8px 2px black);
 }
 
 .header-content-arrow-link2:active::after {
   border-top: 2px solid #998675;
   border-right: 2px solid #998675;
+  -webkit-filter: drop-shadow(8px 8px 2px #d3c1ad);
+          filter: drop-shadow(8px 8px 2px #d3c1ad);
 }
 
 .header-pagination {
