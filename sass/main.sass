@@ -1105,6 +1105,18 @@ body
     &-recent-posts
         max-width: 271px;
 
+        &-item:hover .footer-content-article
+            color: $color-hover;
+
+        &-item:active .footer-content-article
+            color: $color-txt;
+
+        &-item:hover .footer-content-date-txt
+            color: $color-pink;
+
+        &-item:active .footer-content-date-txt
+            color: $color-viol-light;
+
         &-item:first-of-type::after
             content: "";
             display: block;
