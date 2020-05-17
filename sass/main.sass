@@ -1023,7 +1023,7 @@ body
     background-color: #191919;
 
 .footer-content
-    width: $width;
+    width: $width-sm;
     margin: $margin-center;
     display: flex;
     justify-content: center;
@@ -1041,7 +1041,6 @@ body
         justify-content: space-between;
         align-items: space-between;
         flex-wrap: wrap;
-        max-width: 271px;
 
     &-title //все заголовки
         display: block;
@@ -1083,7 +1082,6 @@ body
         text-decoration: none;
 
     &-about
-        max-width: 258px;
 
         &-read-more
             margin: 35px 0 0 0;
@@ -1105,7 +1103,6 @@ body
             color: $color-grey;
 
     &-recent-posts
-        max-width: 271px;
 
         &-item:hover .footer-content-article
             color: $color-hover;
@@ -1122,7 +1119,7 @@ body
         &-item:first-of-type::after
             content: "";
             display: block;
-            width: 270px;
+            width: 100%;
             height: 2px;
             background-color: #252525;
             margin: 20px auto;
@@ -1132,7 +1129,7 @@ body
         &-item:nth-of-type(2)::after
             content: "";
             display: block;
-            width: 270px;
+            width: 100%;
             height: 2px;
             background-color: #252525;
             margin: 20px auto;
@@ -1144,8 +1141,7 @@ body
             text-decoration: none;
 
     &-twitter
-        max-width: 272px;
-
+        
         &-twitt:hover .footer-content-article
             color: $color-hover;
 
@@ -1173,7 +1169,7 @@ body
         &-twitt:first-of-type::after
             content: "";
             display: block;
-            width: 270px;
+            width: 100%;
             height: 2px;
             background-color: #252525;
             margin: 20px auto;
@@ -1183,7 +1179,7 @@ body
         &-twitt:nth-of-type(2)::after
             content: "";
             display: block;
-            width: 270px;
+            width: 100%;
             height: 2px;
             background-color: #252525;
             margin: 20px auto;
@@ -1193,17 +1189,14 @@ body
         &-twitt-link
             text-decoration: none;
 
-            // &:hover
-            //     color: red;
-
         &-twitt-name-link
             text-decoration: none;
 
     &-widgets
         &-link:nth-of-type(3)
-            margin: 8px 0 0 0;
+            margin: 5px 0 0 0;
         &-link:nth-of-type(4)
-            margin: 8px 0 0 0;
+            margin: 5px 0 0 0;
 
 .footer-content-twitter-twitt-link
     font-family: Montserrat;
@@ -1215,6 +1208,7 @@ body
 
 .footer-item
     margin: 80px 30px 80px 0;
+    max-width: $width-sm / 4 - 20;
 
     &:last-of-type
         margin: 80px 0 80px 0;
@@ -1222,7 +1216,115 @@ body
     &:first-of-type
         margin: 63px 30px 80px 0;
 
+.footer-links
+    margin: $margin-center;
+    width: $width;
+    background-color: #111111;
 
+    &-txt
+        font-family: Montserrat;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 300;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: $color-grey;
+
+    &-wrp
+        margin: 0 auto;
+        width: $width-sm;
+        display: flex;
+        justify-content: space-between;
+
+        &-l
+            max-width: 50%;
+            display: flex;
+            justify-content: flex-start;
+
+            &-link-company
+                color: #959595;
+                margin: 0 0 0 3px;
+
+                &::after
+                    content: "|";
+                    display: inline-block;
+                    margin: 0 15px;
+                    color: #252525;
+
+                &:hover
+                    color: $color-pink;
+
+                &:active
+                    color: $color-viol-light;
+
+            &-link-privacy
+
+                &::after
+                    content: "|";
+                    display: inline-block;
+                    margin: 0 15px;
+                    color: #252525;
+
+                &:hover
+                    color: $color-hover;
+
+                &:active
+                    color: $color-txt;
+
+            &-link-faq
+                text-transform: uppercase;
+
+                &::after
+                    content: "|";
+                    display: inline-block;
+                    margin: 0 15px;
+                    color: #252525;
+
+                &:hover
+                    color: $color-hover;
+
+                &:active
+                    color: $color-txt;
+
+            &-link-support
+
+                &:hover
+                    color: $color-hover;
+
+                &:active
+                    color: $color-txt;
+
+        &-r
+            max-width: 50%;
+            display: flex;
+            justify-content: flex-end;
+
+            &-designer
+                margin: 0 0 0 3px;
+
+                &::after
+                    content: "|";
+                    display: inline-block;
+                    margin: 0 15px;
+                    color: #252525;
+
+                &:hover
+                    color: $color-pink;
+
+                &:active
+                    color: $color-viol-light;
+
+            &-marketplace
+                margin: 0 0 0 3px;
+
+                &:hover
+                    color: $color-pink;
+
+                &:active
+                    color: $color-viol-light;
+
+.footer-links-wrp-l, .footer-links-wrp-r
+    margin: 45px 0 50px 0;
 
 
 
