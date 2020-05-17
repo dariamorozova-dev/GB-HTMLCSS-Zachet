@@ -21,6 +21,12 @@ $color-pink: #C666C9;
     font-weight: 300;
     color: $color-txt;
 
+// @keyframes hover-color
+//     0% {background-color: $color-norm}
+        
+//     100% {background-color: #362f2d}
+        
+
 
 body 
     margin: $margin-center;
@@ -98,6 +104,8 @@ body
             color: $color-arrow;
 
 .header-form
+    position: relative;
+
     &-btn
         background-color: transparent;
         border: none;
@@ -111,27 +119,27 @@ body
 
     &-search-label
         fill: $color-norm;
-        position: relative;
-
+        
         &:hover
             fill: $color-hover;
 
     &-input
         position: absolute;
-        top: 15px;
-        left: 0;
+        top: 30px;
+        left: 150px;
         width: 18px;
         height: 30px;
-        z-index: -2;
+        opacity: 0;
         outline: none;
         border: none;
         padding: 5px;
         border-radius: 5px;
+        transition-duration: 1s;
 
         &:focus
-            z-index: 1;
-            width: 300px;
-            transition: width 1s ease-out;
+            opacity: 0.5;
+            width: 150px;
+            margin-left: -150px;
 
 .header-content
     width: $width;
@@ -850,9 +858,11 @@ body
         position: relative;
         border: 1px solid #f8f8f8;
         max-width: 370px;
+        transition: background-color 1s;
 
         &:hover .main-recent-posts-article-txt
             background-color: #362f2d;
+            
 
         &:hover .main-recent-posts-article-txt-title
             color: $color-hover;
