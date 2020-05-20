@@ -36,7 +36,7 @@ body
 
 .header
     margin: $mrgn-reset;
-    padding: 40px 0;
+    padding: 40px 0 19px 0;
     width: $width;
     background-color: #454441;
     background-image: url(../img/header_bg.jpg);
@@ -667,7 +667,6 @@ body
     // background-image: url(img/bg_photo_video.jpg)
 
     &-videofile
-        margin: -90px 0px 0px 0px;
         filter: brightness(50%);
     
     &-content
@@ -975,7 +974,7 @@ body
             box-sizing: border-box;
 
         &-txt
-            margin-top: -4px;
+            margin-top: -5px;
             padding: 30px 0 35px 30px;
 
             &-title
@@ -1219,6 +1218,12 @@ body
             margin: 5px 0 0 0;
         &-link:nth-of-type(4)
             margin: 5px 0 0 0;
+
+        &-link:hover
+            filter: brightness(.4);
+
+        &-link:active
+            filter: brightness(.1);
 
 .footer-content-twitter-twitt-link
     font-family: Montserrat;
