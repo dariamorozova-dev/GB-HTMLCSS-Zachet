@@ -198,7 +198,7 @@ body {
 }
 
 .header-menu-list-link-link:active {
-  color: #d3c1ad;
+  color: #C666C9;
 }
 
 .header-form {
@@ -218,11 +218,23 @@ body {
   fill: #c7b299;
 }
 
+.header-form-btn:active {
+  fill: #C666C9;
+}
+
 .header-form-search-label {
   fill: #ffffff;
 }
 
 .header-form-search-label:hover {
+  fill: #c7b299;
+}
+
+.header-form-search-label:active {
+  fill: #C666C9;
+}
+
+.header-form-search-label:focus {
   fill: #c7b299;
 }
 
@@ -315,10 +327,12 @@ body {
 
 .header-content-txt-btn:hover {
   background-color: #c7b299;
+  color: #555555;
 }
 
 .header-content-txt-btn:active {
   background-color: #d3c1ad;
+  color: #8c8c8c;
 }
 
 .header-content-arrow-link {

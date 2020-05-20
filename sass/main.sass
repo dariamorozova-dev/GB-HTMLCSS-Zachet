@@ -103,7 +103,7 @@ body
         &:hover
             color: $color-hover;
         &:active
-            color: $color-arrow;
+            color: $color-pink;
 
 .header-form
     position: relative;
@@ -119,10 +119,19 @@ body
         &:hover
             fill: $color-hover;
 
+        &:active
+            fill: $color-pink;
+
     &-search-label
         fill: $color-norm;
         
         &:hover
+            fill: $color-hover;
+        
+        &:active
+            fill: $color-pink;
+
+        &:focus
             fill: $color-hover;
 
     &-input
@@ -202,9 +211,11 @@ body
 
             &:hover
                 background-color: $color-hover;
+                color: $color-grey;
 
             &:active
                 background-color: $color-arrow;
+                color: $color-txt;
 
     &-arrow
         // width: ($width - $width-sm) / 2;
