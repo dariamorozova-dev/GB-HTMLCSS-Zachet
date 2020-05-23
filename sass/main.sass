@@ -1,5 +1,5 @@
 @import "_fonts"
-    
+
 $width: 1920px;
 $width-sm: 1170px;
 $margin-center: 0 auto;
@@ -153,11 +153,11 @@ body
             margin-left: -150px;
 
 .header-content
-    width: $width;
+    max-width: $width;
     display: flex;
-
+    
     &-txt
-        width: $width-sm;
+        max-width: $width-sm;
         padding: 0 290px;
         box-sizing: border-box;
         text-align: center;
@@ -267,7 +267,7 @@ body
                 transform: rotate(45deg);
                 position: absolute;
                 top: 44%;
-                left: 50%;
+                left: 35%;
 
             &:hover::after
                 border-top: 2px solid $color-hover;
@@ -311,13 +311,14 @@ body
 .main-content
     margin: $margin-center;
     padding: $pdng-reset;
-    width: $width;
+    max-width: $width;
 
 .main-options
     margin: $margin-center;
-    width: $width-sm;
+    max-width: $width-sm;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     // align-items: flex-end;
 
     &-item
@@ -377,14 +378,14 @@ body
 .main-presentation
     margin: $margin-center;
     padding: 85px 0 0 0;
-    width: $width;
-    height: 637px; //clearfix&alt doesn't works
+    max-width: $width;
+    max-height: 637px;
     text-align: center;
     background-color: $color-bcg;
 
     &-wrp
         margin: $margin-center;
-        width: $width-sm;
+        max-width: $width-sm;
 
     &-p
         font-family: Raleway;
@@ -425,19 +426,19 @@ body
             z-index: 1;
 
 .main-ad
-    width: $width;
+    max-width: $width;
     background-color: #f4f5f8;
     background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%);
 
     &-content
-        width: $width-sm;
+        max-width: $width-sm;
         margin: $margin-center;
         padding: 50px 0;
         display: flex;
         justify-content: space-between;
     
     &-txt
-        width: 80%;
+        max-width: 80%;
 
         &-offer
             font-family: Raleway;
@@ -483,7 +484,7 @@ body
             color: $color-txt;
 
 .main-latest-products
-    width: $width-sm;
+    max-width: $width-sm;
     margin: $margin-center;
     padding-top: 80px;
     display: flex;
@@ -504,7 +505,7 @@ body
     &-txt
         margin: 0 0 40px 0;
         padding: $pdng-reset;
-        width: 770px;
+        max-width: 770px;
         text-align: center;
         font-family: Montserrat;
         font-size: 16px;
@@ -543,7 +544,7 @@ body
                 color: $color-norm;
 
     &-cards
-        width: $width-sm;
+        max-width: $width-sm;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -552,6 +553,7 @@ body
             display: flex;
             flex-direction: column;
             position: relative;
+            max-width: 390px;
 
             &:first-of-type
                 margin-bottom: 30px;
@@ -659,7 +661,7 @@ body
             color: $color-hover;
 
 .main-video
-    width: $width;
+    max-width: $width;
     margin: $margin-center;
     max-height: 705px;
     overflow: hidden;
@@ -670,7 +672,7 @@ body
         filter: brightness(50%);
     
     &-content
-        width: $width;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -736,8 +738,7 @@ body
             
 .main-for-mobile
     margin: $margin-center;
-    width: $width;
-    min-height: 695px;
+    max-width: $width;
     background-color: $color-bcg;
     background-image: url(../img/for-mobile-iphone_in_hand.png);
     background-repeat: no-repeat;
@@ -769,7 +770,7 @@ body
             color: $color-txt;
 
         &-list
-            margin: 0 0 0 50px;
+            margin: 0 0 165px 50px;
             padding: $pdng-reset;
             list-style-type: none; 
 
@@ -793,7 +794,7 @@ body
                     background-repeat: no-repeat;
 
 .main-numbers
-    width: $width;
+    max-width: $width;
     margin: $margin-center;
     display: flex;
     justify-content: center;
@@ -839,7 +840,7 @@ body
 
 .main-recent-posts
     margin: $margin-center;
-    width: $width-sm;
+    max-width: $width-sm;
     text-align: center;
 
     &-title
@@ -864,14 +865,14 @@ body
     &-wrp
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
 
     &-article
         text-align: start;
         position: relative;
         border: 1px solid #f8f8f8;
         max-width: 370px;
-        transition: background-color 1s;
-
+        
         &:hover .main-recent-posts-article-txt
             background-color: #362f2d;
             
@@ -1017,7 +1018,7 @@ body
             fill: $color-grey;
 
 .main-partners
-    width: $width;
+    max-width: $width;
     min-height: 489px;
     margin: $margin-center;
     display: flex;
@@ -1041,11 +1042,11 @@ body
 
 .footer-main
     margin: $margin-center;
-    width: $width;
+    max-width: $width;
     background-color: #191919;
 
 .footer-content
-    width: $width-sm;
+    max-width: $width-sm;
     margin: $margin-center;
     display: flex;
     justify-content: center;
@@ -1245,7 +1246,7 @@ body
 
 .footer-links
     margin: $margin-center;
-    width: $width;
+    max-width: $width;
     background-color: #111111;
 
     &-txt
@@ -1259,7 +1260,7 @@ body
 
     &-wrp
         margin: 0 auto;
-        width: $width-sm;
+        max-width: $width-sm;
         display: flex;
         justify-content: space-between;
 
@@ -1354,4 +1355,4 @@ body
     margin: 45px 0 50px 0;
 
 
-
+@import "_media"
