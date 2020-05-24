@@ -1470,7 +1470,328 @@ $color-hover: #c7b299;
                 margin: 0 5px;
 
 @media only screen and (max-width: 1080px)
+    html, body
+        margin: $mrgn-cntr;
+        padding: 0;
+        width: $width900;
+
+    .header
+        margin: $mrgn-cntr;
+        max-width: $width900; 
+
+        &-logo
+            font-size: 33px;
+
+        &-logomenu
+            margin: 0 auto 57px auto;
+            width: $width800;
+
+        &-menu-list-link-link
+            margin: 0 0 0 13px;
+
+            // &:first-of-type
+            //     margin: 0 0 0 20px;
+
+        &-form
+            margin: 0 0 0 13px;
+            width: 65px;
+
+            &-btn
+                margin: 0 10px 0 0;
+
+            &-input
+                top: 30px;
+                left: 60px;
+
+
+        &-content
+            width: $width900;
+            margin: $mrgn-cntr;
+            justify-content: center;
+
+            &-txt
+                margin: 0 100px;
+                padding: 0;
+                max-width: 605px; 
+
+                &-h
+                    font-size: 30px;
+
+                &-h2
+                    font-size: 41px;  
+
+                &-p
+                    width: 595px; 
+                
+            &-arrow-link, .header-content-arrow-link2
+                max-width: 150px;    
+
+            &-arrow-link::after
+                width: 42px;
+                height: 42px;
+                left: 82%;
+
+            &-arrow-link2::after
+                left: -17%;
+                width: 42px;
+                height: 42px;
+
+        &-pagination
+            margin: 60px 0 0 0;        
+
+    .main-content
+        margin: $mrgn-cntr;
+        width: $width900;
+
+    .main-options
+        margin: $mrgn-cntr;
+        width: $width800;
+
+        &-item
+            margin: 35px auto 20px auto;
+            max-width: 22%;
+
+            &-txt
+                margin: 20px 0;                
+
+            &-h
+                font-size: 19px;
+
+            &:first-of-type .main-options-item-svg
+                margin: 0 0 22px 0;                
+
+    .main-presentation
+        margin: $mrgn-cntr;
+        width: $width900;
+        max-height: 606px;
+        padding: 35px 0 0 0;
+
+        &-wrp
+            margin: $mrgn-cntr;
+            max-width: $width70pr;
+        
+        &-txt
+            margin: 25px auto 40px auto;
+            max-width: 100%;
+
+        &-img-photo:first-of-type
+            width: 570px;
+            height: 299px;
+            position: absolute;
+            top: 65px;
+            left: -91px;
+            z-index: 1;
+
+        &-img-photo:nth-of-type(2)
+            margin: 0 auto;
+            width: 570px;
+            height: 364px;
+            z-index: 2;
+
+        &-img-photo:last-of-type
+            width: 570px;
+            height: 299px;
+            position: absolute;
+            top: 65px;
+            left: 252px;
+            z-index: 1;
+
+    .main-ad
+        margin: $mrgn-cntr;
+        width: $width900;
+
+        &-content
+            width: $width800;
+            padding: 30px 0;
+
+        &-txt-offer
+            font-size: 26px;
+
+        &-txt-desc
+            color: $color-hover;
+            font-size: 16px;
+
+    .main-latest-products
+        margin: $mrgn-cntr;
+        padding: 50px 0 0 0;
+        width: $width900;
+
+        &-txt
+            max-width: 66%;
+
+        &-btns
+            margin: 0 0 15px 0;
+
+        &-cards
+            width: $width800;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            &-item
+                margin: 15px;
+                max-width: 42%;
+
+                &-img
+                    width: 335px;
+                    height: 205px;
+
+        &-load-btn
+            margin: 20px auto 50px auto;
+
+    .main-video
+        margin: $mrgn-cntr;
+        width: $width900;    
+        max-height: 383px;
+        
+        &-videofile
+            max-width: $width900 !important;
+            position: relative;
+            top: -161px;
+            left: 0;
+
+        &-content
+            max-width: $width900;
+            max-height: 383px;
+
+            &-title
+                margin: 20px 0;
+                font-size: 28px;
+
+            &-txt
+                font-size: 14px;
+
+            &-time
+                margin: 20px 0 0 0;
+
+    .main-for-mobile
+        margin: -1px auto 0 auto;
+        max-width: $width900;
+        background-position: 45px 45px;
+        
+        &-content
+            width: 62%;
+            margin: 110px 0 0 0;
+            padding: 0 70px 0 0;
+            box-sizing: border-box;
+
+            &-list
+                margin: 0 0 110px 50px;
+
+    .main-numbers
+        margin: $mrgn-cntr;
+        width: $width900;
+
+        &-icon
+            margin: 40px 20px;
+
+    .main-recent-posts
+        margin: $mrgn-cntr;
+        width: $width900;    
+
+        &-title
+            margin: 60px 0 30px 0;
+
+        &-txt
+            max-width: 68%;
+
+        &-wrp-btns
+            margin: 40px 0;
+
+        &-article
+            margin: 0 0 30px 0;
+            max-width: 60%;
+
+            &:last-of-type
+                margin: 0;
+
+            &-photo-img
+                width: 594px;
+                height: 370px;
+
+            &-photo-pgn
+                top: 65%;
     
+    .main-partners
+        margin: $mrgn-cntr;
+        width: $width900;
+        flex-wrap: wrap;
+
+        &-link
+            margin: 22px 15px;
+
+    .footer-main
+        margin: $mrgn-cntr;
+        width: $width900;
+
+    .footer-content
+        margin: $mrgn-cntr;
+        width: $width800;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &-about
+            order: 3;
+
+        &-resent-posts
+            order: 1;
+
+        &-twitter
+            order: 2;
+
+        &-widgets
+            order: 4;
+
+        &-title
+            font-size: 22px;
+
+        &-widgets-link
+            margin: 5px;
+            
+            &-img
+                width: 130px;
+                height: 98px;
+
+            &:nth-of-type(3)
+                margin: 5px;
+                
+
+            &:last-of-type
+                margin: 5px;
+
+        &-column-widget
+            justify-content: center;
+
+    .footer-item
+        max-width: 49%;
+        margin: 20px 0;
+
+        &:first-of-type
+            margin: 20px 0;
+
+        &:last-of-type
+            margin: 40px 0;
+
+    .footer-links
+        margin: $mrgn-cntr;
+        width: $width900;
+
+        &-wrp
+            width: $width800;
+
+            &-l-link-company::after
+                margin: 0 5px;
+
+            &-l-link-privacy::after
+                margin: 0 5px;
+
+            &-l-link-faq::after
+                margin: 0 5px;
+
+            &-l-link-support::after
+                margin: 0 5px;
+
+            &-r-designer::after
+                margin: 0 5px;
 
 // @media only screen and (max-width: 1080px)
 //     .header-content-txt-h2
