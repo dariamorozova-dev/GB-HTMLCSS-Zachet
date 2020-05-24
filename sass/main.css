@@ -928,7 +928,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 705px;
+  height: 705px;
   position: absolute;
   top: 0;
   left: 0;
@@ -1886,17 +1886,17 @@ body {
   .main-video {
     margin: 0 auto;
     width: 1870px;
-    max-height: 705px;
+    max-height: 698px;
   }
   .main-video-videofile {
     max-width: 1870px !important;
   }
   .main-video-content {
     max-width: 1870px;
-    max-height: 680px;
+    max-height: 698px;
   }
   .main-for-mobile {
-    margin: -9px auto 0 auto;
+    margin: -3px auto 0 auto;
     max-width: 1870px;
     background-position: 400px 80px;
   }
@@ -1919,7 +1919,7 @@ body {
     margin: 60px 0 30px 0;
   }
   .main-recent-posts-txt {
-    max-width: 53%;
+    max-width: 68%;
   }
   .main-partners {
     margin: 0 auto;
@@ -2027,16 +2027,17 @@ body {
   .main-video {
     margin: 0 auto;
     width: 1800px;
-    max-height: 705px;
+    max-height: 697px;
   }
   .main-video-videofile {
     max-width: 1800px !important;
   }
   .main-video-content {
     max-width: 1800px;
+    max-height: 697px;
   }
   .main-for-mobile {
-    margin: -22px auto 0 auto;
+    margin: -14px auto 0 auto;
     max-width: 1800px;
     background-position: 367px 80px;
   }
@@ -2059,7 +2060,7 @@ body {
     margin: 60px 0 30px 0;
   }
   .main-recent-posts-txt {
-    max-width: 53%;
+    max-width: 68%;
   }
   .main-partners {
     margin: 0 auto;
@@ -2089,6 +2090,9 @@ body {
   .header {
     margin: 0 auto;
     max-width: 1700px;
+  }
+  .header-logomenu {
+    margin: 0 auto 175px auto;
   }
   .header-content {
     width: 1700px;
@@ -2122,7 +2126,7 @@ body {
   .main-presentation {
     margin: 0 auto;
     width: 1700px;
-    max-height: 639px;
+    max-height: 668px;
     padding: 65px 0 0 0;
   }
   .main-presentation-wrp {
@@ -2170,22 +2174,23 @@ body {
   .main-video {
     margin: 0 auto;
     width: 1700px;
-    max-height: 705px;
+    max-height: 666px;
   }
   .main-video-videofile {
     max-width: 1700px !important;
   }
   .main-video-content {
     max-width: 1700px;
+    max-height: 666px;
   }
   .main-for-mobile {
-    margin: -41px auto 0 auto;
+    margin: -4px auto 0 auto;
     max-width: 1700px;
     background-position: 336px 80px;
   }
   .main-for-mobile-content {
-    width: 50%;
     margin: 190px 0 0 0;
+    width: 50%;
   }
   .main-for-mobile-content-list {
     margin: 0 0 165px 50px;
@@ -2202,7 +2207,7 @@ body {
     margin: 60px 0 30px 0;
   }
   .main-recent-posts-txt {
-    max-width: 53%;
+    max-width: 68%;
   }
   .main-partners {
     margin: 0 auto;
@@ -2220,6 +2225,167 @@ body {
   .footer-links {
     margin: 0 auto;
     width: 1700px;
+  }
+}
+
+@media only screen and (max-width: 1740px) {
+  html, body {
+    margin: 0 auto;
+    padding: 0;
+    width: 1580px;
+  }
+  .header {
+    margin: 0 auto;
+    max-width: 1580px;
+  }
+  .header-logomenu {
+    margin: 0 auto 155px auto;
+  }
+  .header-content {
+    width: 1580px;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header-content-txt {
+    max-width: 1130px;
+    padding: 0 266px;
+  }
+  .header-content-arrow-link, .header-content .header-content-arrow-link2 {
+    max-width: 40px;
+  }
+  .header-pagination {
+    margin: 170px 0 0 0;
+  }
+  .main-content {
+    margin: 0 auto;
+    width: 1580px;
+  }
+  .main-options {
+    margin: 0 auto;
+    width: 1170px;
+  }
+  .main-options-item {
+    margin: 95px auto 40px auto;
+    max-width: 25%;
+  }
+  .main-presentation {
+    margin: 0 auto;
+    width: 1580px;
+    max-height: 668px;
+    padding: 65px 0 0 0;
+  }
+  .main-presentation-wrp {
+    margin: 0 auto;
+    max-width: 70%;
+  }
+  .main-presentation-txt {
+    margin: 25px auto 40px auto;
+    max-width: 58%;
+  }
+  .main-presentation-img-photo:first-of-type {
+    position: absolute;
+    top: 82px;
+    left: -63px;
+    z-index: 1;
+  }
+  .main-presentation-img-photo:last-of-type {
+    position: absolute;
+    top: 82px;
+    left: 399px;
+    z-index: 1;
+  }
+  .main-ad {
+    margin: 0 auto;
+    width: 1580px;
+  }
+  .main-ad-content {
+    width: 1170px;
+    padding: 40px 0;
+  }
+  .main-latest-products {
+    margin: 0 auto;
+    padding: 50px 0 0 0;
+    width: 1170px;
+  }
+  .main-latest-products-txt {
+    max-width: 66%;
+  }
+  .main-latest-products-cards {
+    width: 1170px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .main-latest-products-cards-item {
+    max-width: 33%;
+  }
+  .main-latest-products-load-btn {
+    margin: 40px auto;
+  }
+  .main-video {
+    margin: 0 auto;
+    width: 1580px;
+    max-height: 644px;
+  }
+  .main-video-videofile {
+    max-width: 1580px !important;
+  }
+  .main-video-content {
+    max-width: 1580px;
+    max-height: 644px;
+  }
+  .main-for-mobile {
+    margin: -2px auto 0 auto;
+    max-width: 1580px;
+    background-position: 336px 80px;
+  }
+  .main-for-mobile-content {
+    width: 50%;
+    margin: 190px 0 0 0;
+  }
+  .main-for-mobile-content-list {
+    margin: 0 0 165px 50px;
+  }
+  .main-numbers {
+    margin: 0 auto;
+    width: 1580px;
+  }
+  .main-recent-posts {
+    margin: 0 auto;
+    width: 1500px;
+  }
+  .main-recent-posts-title {
+    margin: 60px 0 30px 0;
+  }
+  .main-recent-posts-txt {
+    max-width: 68%;
+  }
+  .main-partners {
+    margin: 0 auto;
+    width: 1580px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .main-partners-link {
+    margin: 92px 25px;
+  }
+  .footer-main {
+    margin: 0 auto;
+    width: 1580px;
+  }
+  .footer-item {
+    margin: 60px 30px 60px 0;
+  }
+  .footer-links {
+    margin: 0 auto;
+    width: 1580px;
+  }
+}
+
+@media only screen and (max-width: 1620px) {
+  .header-content-txt-h {
+    color: blue;
   }
 }
 /*# sourceMappingURL=main.css.map */
