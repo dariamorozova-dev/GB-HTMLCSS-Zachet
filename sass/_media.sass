@@ -1369,7 +1369,7 @@ $color-grey: #555555;
             margin: 60px 0 30px 0;
 
         &-txt
-            max-width: 68%;
+            max-width: 75%;
 
         &-wrp-btns
             margin: 40px 0;
@@ -1564,7 +1564,7 @@ $color-grey: #555555;
             // flex-direction: column;
             position: absolute;
             top: 75px;
-            right: 300px;
+            right: 335px;
   
         &-menu-list-link
             text-align: center;
@@ -1590,7 +1590,7 @@ $color-grey: #555555;
 
         &-form
             margin: 0 0 0 13px;
-            width: 120px;
+            width: 65px;
 
             &-btn
                 margin: 0 10px 0 0;
@@ -1604,20 +1604,22 @@ $color-grey: #555555;
             width: $width900;
             margin: $mrgn-cntr;
             justify-content: center;
+            max-height: 265px;
 
             &-txt
-                margin: 0 50px;
+                margin: 0 70px;
                 padding: 0;
                 max-width: 605px; 
 
                 &-h
-                    font-size: 30px;
+                    font-size: 26px;
 
                 &-h2
-                    font-size: 41px;  
+                    font-size: 36px;  
 
                 &-p
-                    width: 595px; 
+                    width: 530px; 
+                    font-size: 14px;
                 
             &-arrow-link, .header-content-arrow-link2
                 max-width: 150px;    
@@ -1633,7 +1635,7 @@ $color-grey: #555555;
                 height: 42px;
 
         &-pagination
-            margin: 60px 0 0 0;        
+            margin: 50px 0 0 0;        
 
     .main-content
         margin: $mrgn-cntr;
@@ -1659,38 +1661,55 @@ $color-grey: #555555;
     .main-presentation
         margin: $mrgn-cntr;
         width: $width900;
-        max-height: 606px;
-        padding: 35px 0 0 0;
+        max-height: 1140px;
+        padding: 20px 0 0 0;
 
         &-wrp
             margin: $mrgn-cntr;
-            max-width: $width70pr;
+            max-width: 80%;
         
         &-txt
             margin: 25px auto 40px auto;
             max-width: 100%;
 
+        &-img
+            // flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
         &-img-photo:first-of-type
+            margin: 0 auto 10px auto;
             width: 570px;
             height: 299px;
-            position: absolute;
-            top: 65px;
-            left: -91px;
-            z-index: 1;
+            position: inherit;
+            top: 0;
+            left: 0;
+            // position: absolute;
+            // top: 65px;
+            // left: -91px;
+            // z-index: 1;
 
         &-img-photo:nth-of-type(2)
-            margin: 0 auto;
+            margin: 0 auto 10px auto;
             width: 570px;
             height: 364px;
-            z-index: 2;
+            position: inherit;
+            top: 0;
+            left: 0;
+            // z-index: 2;
 
         &-img-photo:last-of-type
+            margin: 0 auto;
             width: 570px;
             height: 299px;
-            position: absolute;
-            top: 65px;
-            left: 252px;
-            z-index: 1;
+            position: inherit;
+            top: 0;
+            left: 0;
+            // position: absolute;
+            // top: 65px;
+            // left: 252px;
+            // z-index: 1;
 
     .main-ad
         margin: $mrgn-cntr;
@@ -1713,7 +1732,7 @@ $color-grey: #555555;
         width: $width900;
 
         &-txt
-            max-width: 66%;
+            max-width: 80%;
 
         &-btns
             margin: 0 0 15px 0;
@@ -1737,17 +1756,17 @@ $color-grey: #555555;
     .main-video
         margin: $mrgn-cntr;
         width: $width900;    
-        max-height: 383px;
+        max-height: 330px;
         
         &-videofile
             max-width: $width900 !important;
             position: relative;
-            top: -161px;
+            top: -188px;
             left: 0;
 
         &-content
             max-width: $width900;
-            max-height: 383px;
+            max-height: 330px;
 
             &-title
                 margin: 20px 0;
@@ -1763,15 +1782,24 @@ $color-grey: #555555;
         margin: -1px auto 0 auto;
         max-width: $width900;
         background-position: 45px 45px;
+        background-size: 30%;
         
         &-content
-            width: 62%;
-            margin: 110px 0 0 0;
-            padding: 0 70px 0 0;
+            width: 70%;
+            margin: 46px 0 0 0;
+            padding: 0;
             box-sizing: border-box;
 
+            &-title
+                font-size: 26px;
+
+            &-txt
+                margin: 25px 0 25px 0;
+                font-size: 14px;
+                max-width: 600px;
+
             &-list
-                margin: 0 0 110px 50px;
+                margin: 0 0 38px 50px;
 
     .main-numbers
         margin: $mrgn-cntr;
@@ -1785,13 +1813,13 @@ $color-grey: #555555;
         width: $width900;    
 
         &-title
-            margin: 60px 0 30px 0;
+            margin: 30px 0;
 
         &-txt
-            max-width: 68%;
+            max-width: 87%;
 
         &-wrp-btns
-            margin: 40px 0;
+            margin: 20px 0;
 
         &-article
             margin: 0 0 30px 0;
@@ -1801,19 +1829,29 @@ $color-grey: #555555;
                 margin: 0;
 
             &-photo-img
-                width: 594px;
-                height: 370px;
+                width: 540px;
+                height: 330px;
 
             &-photo-pgn
-                top: 65%;
+                top: 58%;
     
     .main-partners
         margin: $mrgn-cntr;
+        paddong: 20px 0;
+        box-sizing: border-box;
         width: $width900;
         flex-wrap: wrap;
+        background-size: 222%;
+        background-position: 62%;
 
         &-link
             margin: 22px 15px;
+            width: 31%;
+            display: flex;
+            justify-content: center;
+
+            &:hover .main-partners-link-logo
+                filter: drop-shadow(9px -3px 3px #c7b299);
 
     .footer-main
         margin: $mrgn-cntr;
