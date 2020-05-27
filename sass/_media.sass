@@ -23,31 +23,45 @@ $color-grey: #555555;
     html, body
         margin: $mrgn-cntr;
         padding: 0;
-        width: $width1800t;
+        width: 100%;
+        min-width: $width1800t;
 
     .header
         margin: $mrgn-cntr;
-        max-width: $width1800t; 
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800t;
+        background-size: cover; 
         
         &-content
-            width: $width1800t;
+            max-width: 100%;
+            width: 100%;
+            min-width: $width1800t;
             margin: $mrgn-cntr;
             justify-content: center;
 
             &-txt
-                max-width: $width1170 - 40;
+                max-width: 60%;
+                width: 60%;
+                min-width: 58%;
                 padding: 0 266px;
 
             &-arrow-link, .header-content-arrow-link2
-                max-width: ($width1800t - $width1500) / 2;       
+                max-width: 21%;    
+                width: 20%;
+                min-width: 20%;   
 
     .main-content
         margin: $mrgn-cntr;
-        width: $width1800t;        
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800t;        
 
     .main-options
         margin: $mrgn-cntr;
-        width: $width1170;        
+        max-width: 70%;
+        width: 61%;
+        min-width: $width1170;        
 
         &-item
             margin: 95px auto 80px auto;
@@ -55,7 +69,9 @@ $color-grey: #555555;
 
     .main-presentation
         margin: $mrgn-cntr;
-        width: $width1800t;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800t;
         max-height: 639px;
         padding: 85px 0 0 0;        
 
@@ -65,59 +81,82 @@ $color-grey: #555555;
         
         &-txt
             margin: 25px auto 40px auto;
-            max-width: 58%;
+            max-width: 57%;
 
         &-img-photo:first-of-type
             position: absolute;
             top: 82px;
-            left: 38px;
+            left: 4.27%;
             z-index: 1;
 
         &-img-photo:last-of-type
             position: absolute;
             top: 82px;
-            left: 500px;
+            left: 38.7%;
             z-index: 1;
 
     .main-ad
         margin: $mrgn-cntr;
-        width: $width1800t;        
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800t;        
 
         &-content
-            width: $width1170;
+            max-width: 61%;
 
     .main-latest-products
         margin: $mrgn-cntr;
-        width: $width1170;        
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1170;        
 
         &-txt
-            max-width: 66%;
+            max-width: 44%;
 
         &-cards
-            width: $width1170;
+            min-width: 59%;
+            width: 61%;
+            max-width: 63%;
             flex-wrap: wrap;
 
             &-item
                 max-width: 33%;
+                margin: 30px 0;
+
+                &:first-of-type
+                    margin: 30px 0;
+            
+                &:nth-of-type(2)
+                    margin: 30px 0;
+
+                &:nth-of-type(3)
+                    margin: 30px 0;
 
     .main-video
         margin: $mrgn-cntr;
-        width: $width1800t;    
-        max-height: 686px;        
+        max-width: 100%;
+        width: 100%;
+        min-width: 1860px;     
         
         &-videofile
-            max-width: $width1800t !important;
+            max-width: 100%;
+            width: 100%;
+            min-width: 1860px;
+            height: 100%;
             position: relative;
-            top: -10px;
+            top: 0px;
             left: 0;
 
         &-content
-            max-width: $width1800t;
-            max-height: 686px;
+            max-width: 100%;
+            width: 100%;
+            min-width: 1860px;
 
     .main-for-mobile
         margin: -2px auto 0 auto;
-        max-width: $width1800t;
+        max-width: 100%;
+        width: 100%;
+        min-width: 90%;
         background-position: 400px 80px;        
         
         &-content
@@ -129,63 +168,108 @@ $color-grey: #555555;
 
     .main-numbers
         margin: $mrgn-cntr;
-        width: $width1800t;        
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800t;        
 
     .main-recent-posts
         margin: $mrgn-cntr;
-        width: $width1500;           
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800t;
+
+        &-wrp
+            margin: $mrgn-cntr;
+            max-width: 65%;
+            width: 61%;
+            min-width: 59%;           
 
         &-title
             margin: 60px 0 30px 0;
 
         &-txt
-            max-width: 68%;
+            max-width: 38%;
+
+        &-article
+            max-width: 32%;
+
+        &-article-photo-img
+            width: 100%;
+            height: 220px;
     
     .main-partners
         margin: $mrgn-cntr;
-        width: $width1800t;
-        flex-wrap: wrap;        
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800t; 
+        flex-wrap: wrap; 
+        background-size: cover;       
 
         &-link
             margin: 125px 45px;
+            max-width: 15%;
 
     .footer-main
         margin: $mrgn-cntr;
-        width: $width1800t;        
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800t;  
+
+    .footer-content
+        max-width: 70%;
+        width: 64%;
+        min-width: 60%; 
+        justify-content: space-between;      
 
     .footer-links
         margin: $mrgn-cntr;
-        width: $width1800t;        
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800t;         
 
 @media only screen and (max-width: 1920px)
     html, body
         margin: $mrgn-cntr;
         padding: 0;
-        width: $width1800;
+        width: 100%;
+        min-width: $width1800;
 
     .header
         margin: $mrgn-cntr;
-        max-width: $width1800; 
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800;
+        background-size: cover;  
 
         &-content
-            width: $width1800;
+            max-width: 100%;
+            width: 100%;
+            min-width: $width1800;
             margin: $mrgn-cntr;
             justify-content: center;
 
             &-txt
-                max-width: $width1170 - 40;
-                padding: 0 266px;
+                max-width: 63%;
+                width: 62%;
+                min-width: 61%;
+                padding: 0 261px;
 
             &-arrow-link, .header-content-arrow-link2
-                max-width: ($width1800 - $width1500) / 2;       
+                max-width: 21%;    
+                width: 20%;
+                min-width: 20%;         
 
     .main-content
         margin: $mrgn-cntr;
-        width: $width1800;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800;
 
     .main-options
         margin: $mrgn-cntr;
-        width: $width1170;
+        max-width: 70%;
+        width: 61%;
+        min-width: $width1170;  
 
         &-item
             margin: 95px auto 80px auto;
@@ -193,7 +277,9 @@ $color-grey: #555555;
 
     .main-presentation
         margin: $mrgn-cntr;
-        width: $width1800;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800;
         max-height: 639px;
         padding: 85px 0 0 0;
 
@@ -203,59 +289,82 @@ $color-grey: #555555;
         
         &-txt
             margin: 25px auto 40px auto;
-            max-width: 58%;
+            max-width: 57%;
 
         &-img-photo:first-of-type
             position: absolute;
             top: 82px;
-            left: 14px;
+            left: 2.7%;
             z-index: 1;
 
         &-img-photo:last-of-type
             position: absolute;
             top: 82px;
-            left: 475px;
+            left: 38.4%;
             z-index: 1;
 
     .main-ad
         margin: $mrgn-cntr;
-        width: $width1800;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800;
 
         &-content
-            width: $width1170;
+            width: 61%;
 
     .main-latest-products
         margin: $mrgn-cntr;
-        width: $width1170;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1170;
 
         &-txt
-            max-width: 66%;
+            max-width: 44%;
 
         &-cards
-            width: $width1170;
+            min-width: 59%;
+            width: 65%;
+            max-width: 70%;
             flex-wrap: wrap;
 
             &-item
                 max-width: 33%;
+                margin: 30px 0;
+
+                &:first-of-type
+                    margin: 30px 0;
+            
+                &:nth-of-type(2)
+                    margin: 30px 0;
+
+                &:nth-of-type(3)
+                    margin: 30px 0;
 
     .main-video
         margin: $mrgn-cntr;
-        width: $width1800;    
-        max-height: 660px;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800;    
         
         &-videofile
-            max-width: $width1800 !important;
+            max-width: 100%;
+            width: 100%;
+            min-width: 1800px;
+            height: 100%
             position: relative;
-            top: -22px;
+            top: 0px;
             left: 0;
 
         &-content
-            max-width: $width1800;
-            max-height: 660px;
+            max-width: 100%;
+            width: 100%;
+            min-width: $width1800;
 
     .main-for-mobile
         margin: -2px auto 0 auto;
-        max-width: $width1800;
+        max-width: 100%;
+        width: 100%;
+        min-width: 90%;
         background-position: 367px 80px;
         
         &-content
@@ -267,69 +376,114 @@ $color-grey: #555555;
 
     .main-numbers
         margin: $mrgn-cntr;
-        width: $width1800;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800;
 
     .main-recent-posts
         margin: $mrgn-cntr;
-        width: $width1500;    
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800;
+
+        &-wrp
+            margin: $mrgn-cntr;
+            max-width: 65%;
+            width: 61%;
+            min-width: 59%;    
 
         &-title
             margin: 60px 0 30px 0;
 
         &-txt
-            max-width: 68%;
+            max-width: 38%;
+
+        &-article
+            max-width: 32%;
+
+        &-article-photo-img
+                width: 100%;
+                height: 220px;
     
     .main-partners
         margin: $mrgn-cntr;
-        width: $width1800;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800;
         flex-wrap: wrap;
+        background-size: cover;
 
         &-link
             margin: 118px 25px;
+            max-width: 15%;
 
     .footer-main
         margin: $mrgn-cntr;
-        width: $width1800;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800;
+
+    .footer-content
+        max-width: 70%;
+        width: 64%;
+        min-width: 60%; 
+        justify-content: space-between;      
 
     .footer-links
         margin: $mrgn-cntr;
-        width: $width1800;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1800;
 
 @media only screen and (max-width: 1860px)
     html, body
         margin: $mrgn-cntr;
         padding: 0;
-        width: $width1700;
+        width: 100%;
+        min-width: $width1700;
 
     .header
         margin: $mrgn-cntr;
-        max-width: $width1700; 
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1700; 
+        background-size: cover;  
 
         &-logomenu
             margin: 0 auto 175px auto;
 
         &-content
-            width: $width1700;
+            max-width: 100%;
+            width: 100%;
+            min-width: $width1700;
             margin: $mrgn-cntr;
             justify-content: center;
 
             &-txt
-                max-width: $width1170 - 40;
-                padding: 0 266px;
+                max-width: 63%;
+                width: 62%;
+                min-width: 61%;
+                padding: 0 229px;
                 
             &-arrow-link, .header-content-arrow-link2
-                max-width: ($width1700 - $width1500) / 2;      
+                max-width: 21%;    
+                width: 20%;
+                min-width: 20%;      
 
         &-pagination
             margin: 225px 0 0 0; 
 
     .main-content
         margin: $mrgn-cntr;
-        width: $width1700;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1700;
 
     .main-options
         margin: $mrgn-cntr;
-        width: $width1170;
+        max-width: 70%;
+        width: 61%;
+        min-width: $width1170;
 
         &-item
             margin: 95px auto 40px auto;
@@ -337,69 +491,96 @@ $color-grey: #555555;
 
     .main-presentation
         margin: $mrgn-cntr;
-        width: $width1700;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1700;
         max-height: 668px;
         padding: 65px 0 0 0;
 
         &-wrp
             margin: $mrgn-cntr;
-            max-width: $width70pr;
+            max-width: 70%;
         
         &-txt
             margin: 25px auto 40px auto;
-            max-width: 61%;
+            max-width: 58%;
 
         &-img-photo:first-of-type
             position: absolute;
             top: 82px;
-            left: -21px;
+            left: 0;
             z-index: 1;
 
         &-img-photo:last-of-type
             position: absolute;
             top: 82px;
-            left: 440px;
+            left: auto;
+            right: 0;
             z-index: 1;
 
     .main-ad
         margin: $mrgn-cntr;
-        width: $width1700;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1700;
 
         &-content
-            width: $width1170;
+            width: 61%;
 
     .main-latest-products
         margin: $mrgn-cntr;
-        width: $width1170;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1170;
 
         &-txt
-            max-width: 66%;
+            max-width: 44%;
 
         &-cards
-            width: $width1170;
+            min-width: 63%;
+            width: 67%;
+            max-width: 77%;
             flex-wrap: wrap;
 
             &-item
                 max-width: 33%;
+                margin: 30px 0;
+
+                &:first-of-type
+                    margin: 30px 0;
+            
+                &:nth-of-type(2)
+                    margin: 30px 0;
+
+                &:nth-of-type(3)
+                    margin: 30px 0;
 
     .main-video
         margin: $mrgn-cntr;
-        width: $width1700;    
-        max-height: 626px;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1700;    
         
         &-videofile
-            max-width: $width1700 !important;
+            max-width: 100%;
+            width: 100%;
+            min-width: 1700px;
+            height: 100%
             position: relative;
-            top: -39px;
+            top: 0px;
             left: 0;
 
         &-content
-            max-width: $width1700;
-            max-height: 626px;
+            max-width: 100%;
+            width: 100%;
+            min-width: $width1700;
+            height: 100%;
 
     .main-for-mobile
         margin: -2px auto 0 auto;
-        max-width: $width1700;
+        max-width: 100%;
+        width: 100%;
+        min-width: 90%;
         background-position: 336px 80px;
         
         &-content
@@ -411,69 +592,115 @@ $color-grey: #555555;
 
     .main-numbers
         margin: $mrgn-cntr;
-        width: $width1700;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1700;
 
     .main-recent-posts
         margin: $mrgn-cntr;
-        width: $width1500;    
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1500; 
+
+        &-wrp
+            margin: $mrgn-cntr;
+            max-width: 65%;
+            width: 61%;
+            min-width: 59%;      
 
         &-title
             margin: 60px 0 30px 0;
 
         &-txt
-            max-width: 68%;
+            min-width: 40%;
+            max-width: 42%;
+
+        &-article
+            max-width: 32%;
+
+        &-article-photo-img
+            width: 100%;
+            height: 220px;
     
     .main-partners
         margin: $mrgn-cntr;
-        width: $width1700;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1700;
         flex-wrap: wrap;
+        background-size: cover;
 
         &-link
-            margin: 107px 25px;
+            margin: 118px 25px;
+            max-width: 15%;
 
     .footer-main
         margin: $mrgn-cntr;
-        width: $width1700;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1700;
+
+    .footer-content
+        max-width: 75%;
+        width: 70%;
+        min-width: 65%; 
+        justify-content: space-between;   
 
     .footer-links
         margin: $mrgn-cntr;
-        width: $width1700;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1700;
 
 @media only screen and (max-width: 1760px)
     html, body
         margin: $mrgn-cntr;
         padding: 0;
-        width: $width1580;
+        width: 100%;
+        min-width: $width1580;
 
     .header
         margin: $mrgn-cntr;
-        max-width: $width1580; 
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1580; 
+        background-size: cover;  
 
         &-logomenu
             margin: 0 auto 155px auto;
 
         &-content
-            width: $width1580;
+            max-width: 100%;
+            width: 100%;
+            min-width: $width1580;
             margin: $mrgn-cntr;
             justify-content: center;
 
             &-txt
-                max-width: $width1170 - 40;
-                padding: 0 266px;
+                max-width: 60%;
+                width: 60%;
+                min-width: 58%;
+                padding: 0 188px;
                 
             &-arrow-link, .header-content-arrow-link2
-                max-width: ($width1580 - $width1500) / 2;      
+                max-width: 21%;    
+                width: 20%;
+                min-width: 20%;      
 
         &-pagination
-            margin: 170px 0 0 0; 
+            margin: 225px 0 0 0; 
 
     .main-content
         margin: $mrgn-cntr;
-        width: $width1580;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1580;
 
     .main-options
         margin: $mrgn-cntr;
-        width: $width1170;
+        max-width: 70%;
+        width: 61%;
+        min-width: $width1170;
 
         &-item
             margin: 95px auto 40px auto;
@@ -481,7 +708,9 @@ $color-grey: #555555;
 
     .main-presentation
         margin: $mrgn-cntr;
-        width: $width1580;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1580;
         max-height: 668px;
         padding: 65px 0 0 0;
 
@@ -496,59 +725,85 @@ $color-grey: #555555;
         &-img-photo:first-of-type
             position: absolute;
             top: 82px;
-            left: -63px;
+            left: 0;
             z-index: 1;
 
         &-img-photo:last-of-type
             position: absolute;
             top: 82px;
-            left: 399px;
+            left: auto;
+            right: 0;
             z-index: 1;
 
     .main-ad
         margin: $mrgn-cntr;
-        width: $width1580;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1580;
 
         &-content
-            width: $width1170;
+            width: 61%;
             padding: 40px 0;
 
     .main-latest-products
         margin: $mrgn-cntr;
         padding: 50px 0 0 0;
-        width: $width1170;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1170;
 
         &-txt
-            max-width: 66%;
+            max-width: 44%;
 
         &-cards
-            width: $width1170;
+            min-width: 71%;
+            width: 72%;
+            max-width: 75%;
             flex-wrap: wrap;
+            justify-content: space-around;
 
             &-item
-                max-width: 33%;
+                max-width: 35%;
+                margin: 30px 0;
+
+                &:first-of-type
+                    margin: 30px 0;
+            
+                &:nth-of-type(2)
+                    margin: 30px 0;
+
+                &:nth-of-type(3)
+                    margin: 30px 0;
 
         &-load-btn
             margin: 40px auto;
 
     .main-video
         margin: $mrgn-cntr;
-        width: $width1580;    
-        max-height: 583px;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1580;    
         
         &-videofile
-            max-width: $width1580 !important;
+            max-width: 100%;
+            width: 100%;
+            min-width: 1580px;
+            height: 100%
             position: relative;
-            top: -61px;
+            top: 0px;
             left: 0;
 
         &-content
-            max-width: $width1580;
-            max-height: 583px;
+            max-width: 100%;
+            width: 100%;
+            min-width: $width1580;
+            height: 100%;
 
     .main-for-mobile
         margin: -2px auto 0 auto;
-        max-width: $width1580;
+        max-width: 100%;
+        width: 100%;
+        min-width: 90%;
         background-position: 336px 80px;
         
         &-content
@@ -560,29 +815,58 @@ $color-grey: #555555;
 
     .main-numbers
         margin: $mrgn-cntr;
-        width: $width1580;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1580;
 
     .main-recent-posts
         margin: $mrgn-cntr;
-        width: $width1500;    
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1500;    
+
+        &-wrp
+            margin: $mrgn-cntr;
+            max-width: 75%;
+            width: 73%;
+            min-width: 71%; 
 
         &-title
             margin: 60px 0 30px 0;
 
         &-txt
-            max-width: 68%;
+            max-width: 40%;
+
+        &-article
+            max-width: 30%;
+
+        &-article-photo-img
+            width: 100%;
+            height: 220px;
     
     .main-partners
         margin: $mrgn-cntr;
-        width: $width1580;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1580;
         flex-wrap: wrap;
+        background-size: cover;
 
         &-link
             margin: 92px 25px;
+            max-width: 15%;
 
     .footer-main
         margin: $mrgn-cntr;
-        width: $width1580;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1580;
+
+    .footer-content
+        max-width: 75%;
+        width: 73%;
+        min-width: 70%; 
+        justify-content: space-between;  
 
     .footer-item
         margin: 60px 30px 60px 0;
@@ -592,44 +876,60 @@ $color-grey: #555555;
 
     .footer-links
         margin: $mrgn-cntr;
-        width: $width1580;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1580;
 
 @media only screen and (max-width: 1640px)
     html, body
         margin: $mrgn-cntr;
         padding: 0;
-        width: $width1460;
+        width: 100%;
+        min-width: $width1460;
 
     .header
         margin: $mrgn-cntr;
-        max-width: $width1460; 
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1460; 
+        background-size: cover; 
 
         &-logomenu
             margin: 0 auto 120px auto;
 
         &-content
-            width: $width1460;
+            max-width: 100%;
+            width: 100%;
+            min-width: $width1460;
             margin: $mrgn-cntr;
             justify-content: center;
 
             &-txt
-                margin: 0 110px;
+                margin: 0;
                 padding: 0;
-                max-width: 605px;    
+                max-width: 60%;
+                width: 39%;
+                min-width: 38%;    
                 
             &-arrow-link, .header-content-arrow-link2
-                max-width: ($width1460 - ($width1170 - 40)) / 2;      
+                max-width: 21%;    
+                width: 20%;
+                min-width: 20%;      
 
         &-pagination
             margin: 150px 0 0 0; 
 
     .main-content
         margin: $mrgn-cntr;
-        width: $width1460;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1460;
 
     .main-options
         margin: $mrgn-cntr;
-        width: $width1170;
+        max-width: 70%;
+        width: 61%;
+        min-width: $width1170;
 
         &-item
             margin: 95px auto 40px auto;
@@ -637,7 +937,9 @@ $color-grey: #555555;
 
     .main-presentation
         margin: $mrgn-cntr;
-        width: $width1460;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1460;
         max-height: 668px;
         padding: 65px 0 0 0;
 
@@ -647,26 +949,37 @@ $color-grey: #555555;
         
         &-txt
             margin: 25px auto 40px auto;
-            max-width: 71%;
+            max-width: 65%;
 
         &-img-photo:first-of-type
             position: absolute;
-            top: 82px;
-            left: -105px;
+            top: 74px;
+            left: 0px;
             z-index: 1;
+            width: 693px;
+            height: 360px;
+
+        &-img-photo:nth-of-type(2)
+            width: 693px;
+            height: 433px;
 
         &-img-photo:last-of-type
             position: absolute;
-            top: 82px;
-            left: 357px;
+            top: 74px;
+            left: auto;
+            right: 0;
             z-index: 1;
+            width: 693px;
+            height: 360px;
 
     .main-ad
         margin: $mrgn-cntr;
-        width: $width1460;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1460;
 
         &-content
-            width: $width1170;
+            width: 61%;
             padding: 40px 0;
 
         &-txt-desc
@@ -675,39 +988,62 @@ $color-grey: #555555;
     .main-latest-products
         margin: $mrgn-cntr;
         padding: 50px 0 0 0;
-        width: $width1170;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1170;
 
         &-txt
-            max-width: 66%;
+            max-width: 49%;
 
         &-cards
-            width: $width1170;
+            min-width: 71%;
+            width: 72%;
+            max-width: 75%;
             flex-wrap: wrap;
+            justify-content: center;
 
             &-item
-                max-width: 33%;
+                max-width: 34%;
+                margin: 30px 10px;
+
+                &:first-of-type
+                    margin: 30px 10px;
+            
+                &:nth-of-type(2)
+                    margin: 30px 10px;
+
+                &:nth-of-type(3)
+                    margin: 30px 10px;
+
 
         &-load-btn
             margin: 40px auto;
 
     .main-video
         margin: $mrgn-cntr;
-        width: $width1460;    
-        max-height: 540px;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1460;
         
         &-videofile
-            max-width: $width1460 !important;
+            max-width: 100%;
+            width: 100%;
+            min-width: 1460px;
+            height: 100%
             position: relative;
-            top: -82px;
+            top: 0px;
             left: 0;
 
         &-content
-            max-width: $width1460;
-            max-height: 540px;
+            max-width: 100%;
+            width: 100%;
+            min-width: $width1460;
+            height: 100%;
 
     .main-for-mobile
-        margin: -2px auto 0 auto;
-        max-width: $width1460;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1460;
         background-position: 280px 80px;
         
         &-content
@@ -719,29 +1055,58 @@ $color-grey: #555555;
 
     .main-numbers
         margin: $mrgn-cntr;
-        width: $width1460;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1460;
 
     .main-recent-posts
         margin: $mrgn-cntr;
-        width: $width1500;    
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1460;    
+
+        &-wrp
+            margin: $mrgn-cntr;
+            max-width: 85%;
+            width: 82%;
+            min-width: 80%;     
 
         &-title
             margin: 60px 0 30px 0;
 
         &-txt
-            max-width: 68%;
+            max-width: 50%;
+
+        &-article
+            max-width: 30%;
+
+        &-article-photo-img
+            width: 100%;
+            height: 220px;
     
     .main-partners
         margin: $mrgn-cntr;
-        width: $width1460;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1460;
         flex-wrap: wrap;
+        background-size: cover;
 
         &-link
             margin: 75px 25px;
+            max-width: 15%;
 
     .footer-main
         margin: $mrgn-cntr;
-        width: $width1460;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1460;
+
+    .footer-content
+        max-width: 75%;
+        width: 75%;
+        min-width: 73%; 
+        justify-content: space-between;  
 
     .footer-item
         margin: 60px 30px 60px 0;
@@ -751,7 +1116,9 @@ $color-grey: #555555;
 
     .footer-links
         margin: $mrgn-cntr;
-        width: $width1460;
+        max-width: 100%;
+        width: 100%;
+        min-width: $width1460;
 
 @media only screen and (max-width: 1520px)
     html, body
