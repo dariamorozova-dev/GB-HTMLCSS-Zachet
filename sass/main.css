@@ -6282,7 +6282,7 @@ body {
     position: absolute;
     top: 25px;
     width: 35px;
-    height: 3px;
+    height: 5px;
   }
   .header-menu-list-input-label-span::before {
     content: '';
@@ -6291,7 +6291,7 @@ body {
     position: absolute;
     top: -10px;
     width: 35px;
-    height: 3px;
+    height: 5px;
   }
   .header-menu-list-input-label-span::after {
     content: '';
@@ -6300,7 +6300,7 @@ body {
     position: absolute;
     top: 10px;
     width: 35px;
-    height: 3px;
+    height: 5px;
   }
   .header-menu-list-input-label:hover > .header-menu-list-input-label-span::after,
   .header-menu-list-input-label:hover > .header-menu-list-input-label-span::before,
@@ -6832,7 +6832,7 @@ body {
     position: absolute;
     top: 25px;
     width: 35px;
-    height: 3px;
+    height: 5px;
   }
   .header-menu-list-input-label-span::before {
     content: '';
@@ -6841,7 +6841,7 @@ body {
     position: absolute;
     top: -10px;
     width: 35px;
-    height: 3px;
+    height: 5px;
   }
   .header-menu-list-input-label-span::after {
     content: '';
@@ -6850,7 +6850,7 @@ body {
     position: absolute;
     top: 10px;
     width: 35px;
-    height: 3px;
+    height: 5px;
   }
   .header-menu-list-input-label:hover > .header-menu-list-input-label-span::after,
   .header-menu-list-input-label:hover > .header-menu-list-input-label-span::before,
@@ -8281,10 +8281,28 @@ body {
   .footer-links-wrp-l {
     margin: 20px 0;
     max-width: 97%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .footer-links-wrp-r {
     margin: 20px 0;
     max-width: 97%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .footer-links-wrp-l-link-company::after {
     margin: 0 5px;
