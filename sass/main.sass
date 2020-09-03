@@ -1,3 +1,5 @@
+@import "_fonts"
+
 $width: 1920px;
 $width-sm: 1170px;
 $margin-center: 0 auto;
@@ -10,6 +12,9 @@ $color-arrow: #d3c1ad;
 $color-bcg: #fbfaf8;
 $color-grey: #555555;
 $color-txt: #8c8c8c;
+$color-viol-dark: #72059E;
+$color-viol-light: #9C6AB0;
+$color-pink: #C666C9;
 
 @mixin txt-option 
     font-family: Montserrat;
@@ -18,6 +23,12 @@ $color-txt: #8c8c8c;
     font-weight: 300;
     color: $color-txt;
 
+// @keyframes hover-color
+//     0% {background-color: $color-norm}
+        
+//     100% {background-color: #362f2d}
+        
+
 
 body 
     margin: $margin-center;
@@ -25,7 +36,7 @@ body
 
 .header
     margin: $mrgn-reset;
-    padding: 40px 0;
+    padding: 40px 0 19px 0;
     width: $width;
     background-color: #454441;
     background-image: url(../img/header_bg.jpg);
@@ -51,8 +62,22 @@ body
     text-decoration: none;
     display: flex;
     align-items: center;
+    fill: $color-norm;
+    
     &-txt
        display: block; 
+
+    &:hover 
+        fill: $color-hover;
+
+    &:hover .header-logo-txt
+        color: $color-hover;
+
+    &:active 
+        fill: $color-txt;
+
+    &:active .header-logo-txt
+        color: $color-txt;
 
 .header-menu
     display: flex;
@@ -61,11 +86,12 @@ body
 .header-menu-list
     display: flex;
     justify-content: space-around;
+    align-items: center;
     list-style-type: none;
     padding: $pdng-reset;
     margin: $mrgn-reset;
     
-    &-link
+    &-link-link
         font-family: Montserrat;
         font-size: 14px;
         line-height: 1.2;
@@ -73,33 +99,73 @@ body
         color: $color-norm;
         text-transform: capitalize;
         margin-left: 30px;
+        text-decoration: none;
             
         &:hover
             color: $color-hover;
+        &:active
+            color: $color-pink;
+
+    &-input-label
+        display: none;
+
+    &-input
+        // display: none;
+        visibility: hidden;
 
 .header-form
+    position: relative;
+
     &-btn
         background-color: transparent;
         border: none;
-        margin: 0;
+        margin: 0 30px 0 65px;
         padding: 0;
         fill: $color-norm;
+        outline: none;
 
         &:hover
             fill: $color-hover;
+
+        &:active
+            fill: $color-pink;
 
     &-search-label
         fill: $color-norm;
-
+        
         &:hover
             fill: $color-hover;
+        
+        &:active
+            fill: $color-pink;
+
+        &:focus
+            fill: $color-hover;
+
+    &-input
+        position: absolute;
+        top: 30px;
+        left: 150px;
+        width: 18px;
+        height: 30px;
+        opacity: 0;
+        outline: none;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        transition-duration: 1s;
+
+        &:focus
+            opacity: 0.5;
+            width: 150px;
+            margin-left: -150px;
 
 .header-content
-    width: $width;
+    max-width: $width;
     display: flex;
-
+    
     &-txt
-        width: $width-sm;
+        max-width: $width-sm+5;
         padding: 0 290px;
         box-sizing: border-box;
         text-align: center;
@@ -153,20 +219,22 @@ body
 
             &:hover
                 background-color: $color-hover;
+                color: $color-grey;
 
             &:active
                 background-color: $color-arrow;
+                color: $color-txt;
 
     &-arrow
-        width: ($width - $width-sm) / 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // width: ($width - $width-sm) / 2;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
 
         &-link
             display: block;
-            width: 40px;
-            height: 73px;
+            width: ($width - $width-sm) / 2;
+            height: 290px;
             position: relative;
 
             &::after
@@ -178,21 +246,23 @@ body
                 border-left: 2px solid $color-arrow;
                 transform: rotate(45deg);
                 position: absolute;
-                top: 10px;
-                left: 0;
+                top: 44%;
+                left: 50%;
 
             &:hover::after
                 border-bottom: 2px solid $color-hover;
                 border-left: 2px solid $color-hover;
+                filter: drop-shadow(8px 8px 2px black);
 
             &:active::after
                 border-bottom: 2px solid $color-btn;
                 border-left: 2px solid $color-btn;
+                filter: drop-shadow(8px 8px 2px $color-arrow);
 
         &-link2
             display: block;
-            width: 40px;
-            height: 73px;
+            width: ($width - $width-sm) / 2;
+            height: 290px;
             position: relative;
 
             &::after
@@ -204,16 +274,18 @@ body
                 border-right: 2px solid $color-arrow;
                 transform: rotate(45deg);
                 position: absolute;
-                top: 10px;
-                left: -25px;
+                top: 44%;
+                left: 35%;
 
             &:hover::after
                 border-top: 2px solid $color-hover;
                 border-right: 2px solid $color-hover;
+                filter: drop-shadow(8px 8px 2px black);
 
             &:active::after
                 border-top: 2px solid $color-btn;
                 border-right: 2px solid $color-btn;
+                filter: drop-shadow(8px 8px 2px $color-arrow);
     
 .header-pagination
     margin: 290px 0 0 0;
@@ -238,17 +310,23 @@ body
             background-color: transparent;
             border: 2px solid $color-arrow;
             transform: scale(1.2);
+        
+        &:active
+            background-color: transparent;
+            border: 2px solid $color-btn;
+            transform: scale(1.2);
 
 .main-content
     margin: $margin-center;
     padding: $pdng-reset;
-    width: $width;
+    max-width: $width;
 
 .main-options
     margin: $margin-center;
-    width: $width-sm;
+    max-width: $width-sm;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     // align-items: flex-end;
 
     &-item
@@ -258,6 +336,7 @@ body
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
 
         &::after
             content: "";
@@ -308,14 +387,14 @@ body
 .main-presentation
     margin: $margin-center;
     padding: 85px 0 0 0;
-    width: $width;
-    height: 637px; //clearfix&alt doesn't works
+    max-width: $width;
+    max-height: 637px;
     text-align: center;
     background-color: $color-bcg;
 
     &-wrp
         margin: $margin-center;
-        width: $width-sm;
+        max-width: $width-sm;
 
     &-p
         font-family: Raleway;
@@ -337,7 +416,6 @@ body
     &-img
         display: flex;
         justify-content: center;
-        background-color: orange;
         position: relative;
 
         &-photo:first-of-type
@@ -347,7 +425,6 @@ body
             z-index: 1;
 
         &-photo:nth-of-type(2)
-            position: absolute;
             margin: 0 auto;
             z-index: 2;
 
@@ -357,5 +434,933 @@ body
             left: 430px;
             z-index: 1;
 
+.main-ad
+    max-width: $width;
+    background-color: #f4f5f8;
+    background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%);
+
+    &-content
+        max-width: $width-sm;
+        margin: $margin-center;
+        padding: 50px 0;
+        display: flex;
+        justify-content: space-between;
+    
+    &-txt
+        max-width: 80%;
+
+        &-offer
+            font-family: Raleway;
+            font-size: 28px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: $color-norm;
+            text-transform: capitalize;
+
+            &-companyname
+                color: $color-hover;
+        
+        &-desc
+            margin: $mrgn-reset;
+            font-family: Montserrat;
+            font-size: 18px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #615855;
+
+    &-btn
+        margin: $mrgn-reset;
+        padding: $pdng-reset;
+        outline: none;
+        border: none;
+        width: 170px;
+        height: 50px;
+        background-color: #998675;
+        border-radius: 3.0px;
+        font-family: Raleway;
+        font-size: 14px;
+        line-height: 23px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: $color-norm;
+
+        &:hover
+            background-color: $color-hover;
+            color: $color-grey;
+
+        &:active
+            background-color: $color-arrow;
+            color: $color-txt;
+
+.main-latest-products
+    max-width: $width-sm;
+    margin: $margin-center;
+    padding-top: 80px;
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &-title
+        margin-bottom: 25px;
+        text-transform: capitalize;
+        font-family: Raleway;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: $color-grey;
+
+    &-txt
+        margin: 0 0 40px 0;
+        padding: $pdng-reset;
+        max-width: 770px;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 300;
+        color: $color-txt;
+
+    &-btns
+        margin: 0 auto 40px auto;
+
+        &-item
+            margin: 0 10px 0 0;
+            padding: $pdng-reset;
+            width: 120px;
+            height: 32px;
+            border: 1.0px solid #ebebeb;
+            border-radius: 3.0px;
+            background-color: $color-norm;
+            font-family: Montserrat;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 300;
+            color: $color-txt;
+            text-transform: capitalize;
+            outline: none;
+
+            &:last-child
+                margin-right: 0;
+
+            &:hover
+                background-color: $color-btn;
+                color: $color-norm;
+
+            &:active
+                background-color: $color-hover;
+                color: $color-norm;
+
+    &-cards
+        max-width: $width-sm;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-item
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            max-width: 390px;
+
+            &:first-of-type
+                margin-bottom: 30px;
+            
+            &:nth-of-type(2)
+                margin-bottom: 30px;
+
+            &:nth-of-type(3)
+                margin-bottom: 30px;
+
+            &-img
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-color: $color-bcg;
+
+            &-txt
+                padding: 30px 0 30px 30px;
+                background-color: $color-bcg;
+                position: relative;
+
+                &::before
+                    content: '';
+                    position: absolute;
+                    left: 10px;
+                    top: -40px;
+                    border: 25px solid transparent;
+                    border-bottom: 20px solid $color-bcg;
+
+            &-title
+                displa
+                font-family: Raleway;
+                font-size: 20px;
+                line-height: 1.2;
+                font-weight: 500;
+                color: $color-hover;
+                text-transform: capitalize;
+
+            &-desc
+                display: block;
+                font-family: Montserrat;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 300;
+                color: #d1d1d1;
+                text-transform: capitalize;
+        
+            &-link
+                position: absolute;
+                top: 30%;
+                left: 35%;
+                fill: transparent;
+
+            &-link2
+                position: absolute;
+                top: 30%;
+                right: 35%;
+                fill: transparent;
+
+            &:hover .main-latest-products-cards-item-img
+                filter: brightness(37%);
+
+            &:hover .main-latest-products-cards-item-link,&:hover .main-latest-products-cards-item-link2
+                fill: $color-norm;
+
+            &:hover .main-latest-products-cards-item-link:hover,&:hover .main-latest-products-cards-item-link2:hover
+                fill: $color-hover;
+
+            &:hover .main-latest-products-cards-item-link:active,&:hover .main-latest-products-cards-item-link2:active
+                fill: $color-txt;
+
+            &:hover .main-latest-products-cards-item-txt
+                background-color: #362f2d;
+
+            &:hover .main-latest-products-cards-item-txt::before
+                border-bottom: 20px solid #362f2d;
+
+            &:hover .main-latest-products-cards-item-title
+                color: $color-norm;
+
+            &:hover .main-latest-products-cards-item-desc
+                color: $color-hover;
+
+    &-load-btn
+        margin: 40px auto 80px auto;
+        padding: $pdng-reset;
+        outline: none;
+        border: none;
+        width: 170px;
+        height: 50px;
+        background-color: #998675;
+        border-radius: 3.0px;
+        font-family: Raleway;
+        font-size: 14px;
+        line-height: 23px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: $color-norm;
+
+        &:hover
+            background-color: $color-hover;
+            color: $color-grey;
+
+        &:active
+            background-color: $color-btn;
+            color: $color-hover;
+
+.main-video
+    max-width: $width;
+    margin: $margin-center;
+    max-height: 705px;
+    overflow: hidden;
+    position: relative;
+    // background-image: url(img/bg_photo_video.jpg)
+
+    &-videofile
+        filter: brightness(50%);
+    
+    &-content
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 705px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        &-btn
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border: none;
+            border-radius: 50%;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.2);
+
+            &:hover
+                background-color: rgba(255, 255, 255, 0.2);
+
+            &:hover .main-video-content-icon
+                fill: $color-hover;
+
+            &:active
+                background-color: rgba(255, 255, 255, 0.2);
+
+            &:active .main-video-content-icon
+                fill: $color-txt;
+
+        &-icon
+            margin: auto;
+            fill: $color-norm;
+
+        &-title
+            margin: 45px 0 30px 0;
+            font-family: Raleway;
+            font-size: 30px;
+            line-height: 1.2;
+            font-weight: 500;
+            color: $color-norm;
+            text-transform: capitalize;
+
+        &-txt
+            margin: $mrgn-reset;
+            max-width: 560px;
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: 300;
+            color: $color-norm;
+
+        &-time
+            margin: 45px 0 0 0;
+            font-family: Montserrat;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            color: $color-hover;
+            
+.main-for-mobile
+    margin: $margin-center;
+    max-width: $width;
+    background-color: $color-bcg;
+    background-image: url(../img/for-mobile-iphone_in_hand.png);
+    background-repeat: no-repeat;
+    background-position: 423px 80px;
+    display: flex;
+    justify-content: flex-end;
+
+    &-content
+        margin: 190px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+
+        &-title
+            font-family: Raleway;
+            font-size: 30px;
+            line-height: 1.2;
+            font-weight: 600;
+            color: $color-grey;
+
+        &-txt
+            margin: 40px 0 25px 0;
+            max-width: 657px;
+            font-family: Montserrat;
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: 300;
+            color: $color-txt;
+
+        &-list
+            margin: 0 0 165px 50px;
+            padding: $pdng-reset;
+            list-style-type: none; 
+
+            &-info
+                display: flex;
+                align-items: center;
+                font-family: Montserrat;
+                font-size: 16px;
+                line-height: 32px;
+                font-weight: 300;
+                color: $color-txt;
+
+                &::before
+                    content: "";
+                    display: block;
+                    margin: 0 30px 0 0;
+                    width: 23px;
+                    height: 23px;
+                    background-image: url(../img/list-for-mobile.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
+.main-numbers
+    max-width: $width;
+    margin: $margin-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f5f8;
+    background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%);
+
+    &-icon
+        margin: 65px 37.5px 54px;
+        fill: $color-hover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &::after
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: $color-norm;
+            margin: 0 auto;
+            align-self: flex-end;
+
+    &-num
+        display: block;
+        margin: 30px 0 20px 0;
+        font-family: Montserrat;
+        font-size: 48px;
+        line-height: 36px;
+        font-weight: 200;
+        color: $color-norm;
+
+    &-txt
+        display: block;
+        margin: 0 0 30px 0;
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-hover;
+
+.main-recent-posts
+    margin: $margin-center;
+    max-width: $width-sm;
+    text-align: center;
+
+    &-title
+        display: block;
+        margin: 80px 0 30px 0;
+        text-transform: capitalize;
+        font-family: Raleway;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: $color-grey;
+
+    &-txt
+        margin: 0 auto 40px;
+        max-width: 770px;
+        font-family: Montserrat;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 300;
+        color: $color-txt;
+
+    &-wrp
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    &-article
+        text-align: start;
+        position: relative;
+        border: 1px solid #f8f8f8;
+        max-width: 370px;
+        
+        &:hover .main-recent-posts-article-txt
+            background-color: #362f2d;
+            
+
+        &:hover .main-recent-posts-article-txt-title
+            color: $color-hover;
+
+        &:hover .main-recent-posts-article-txt-desc
+            color: $color-norm;
+
+        &:hover .main-recent-posts-article-photo-img
+            filter: brightness(0.5);
+
+        &:hover .main-recent-posts-article-link:hover
+            color: $color-bcg;
+            fill: $color-bcg;
+
+        &:active .main-recent-posts-article-link:active
+            color: $color-grey;
+            fill: $color-grey;
+
+        &:hover .main-recent-posts-article-date
+            background-color: $color-hover;
+
+        &:hover .main-recent-posts-article-month
+            background-color: #a48d72;
 
 
+        &-photo
+            margin: 0;
+
+            &-img
+
+            &-pgn
+                margin: 0 0 0 0;
+                position: absolute;
+                top: 45%;
+                left: 40%;
+                display: flex;
+                justify-content: center;
+                box-sizing: border-box;
+
+                &-link
+                    display: block;
+                    width: 7px;
+                    height: 7px;
+                    background-color: $color-norm;
+                    border-radius: 50%;
+                    border: 2px solid transparent;
+                    opacity: 0.5;
+                    margin-right: 11px;
+
+                    &:last-child
+                        margin-right: 0;
+
+                    &:hover
+                        background-color: transparent;
+                        border: 2px solid $color-hover;
+                        transform: scale(1.2);
+                    
+                    &:active
+                        background-color: transparent;
+                        border: 2px solid $color-btn;
+                        transform: scale(1.2);
+
+        &-wrp-date
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
+        &-date, &-month
+            display: block;
+
+        &-date
+            text-align: center;
+            padding-top: 10px;
+            box-sizing: border-box;
+            width: 50px;
+            height: 35px;
+            background-color: #363636;
+            border-radius: 3.0px 3.0px 0.0px 0.0px;
+            font-family: Montserrat;
+            font-size: 24px;
+            line-height: 20px;
+            font-weight: 300;
+            color: $color-norm;
+
+        &-month
+            width: 50px;
+            height: 25px;
+            background-color: #252525;
+            border-radius: 0.0px 0.0px 3.0px 3.0px;
+            font-family: Roboto;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 400;
+            color: $color-norm;
+            text-align: center;
+            padding-top: 2px;
+            box-sizing: border-box;
+
+        &-txt
+            margin-top: -5px;
+            padding: 30px 0 35px 30px;
+
+            &-title
+                font-family: Raleway;
+                font-size: 20px;
+                line-height: 1.2;
+                font-weight: 500;
+                color: $color-grey;
+            &-desc
+                font-family: Montserrat;
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 300;
+                color: $color-txt;
+
+        &-link
+            text-decoration: none;
+            font-family: Montserrat;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 300;
+            color: $color-hover;
+            text-transform: capitalize;
+            fill: $color-hover;
+
+    &-wrp-btns
+        margin: 40px 0 80px 0;
+
+    &-btn-l, &-btn-r
+        padding: $pdng-reset;
+        border: none;
+        outline: none;
+        background-color: $color-norm;
+        fill: #d1d1d1;
+
+        &:hover
+            fill: $color-hover;
+
+        &:active
+            fill: $color-grey;
+
+.main-partners
+    max-width: $width;
+    margin: $margin-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/partners-bg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    &-link
+        margin: 133px 45px;
+        display: block;
+        text-decoration: none;
+
+        &:hover .main-partners-link-logo
+            filter: drop-shadow(9px -3px 3px black);
+
+        &:active .main-partners-link-logo
+            filter: drop-shadow(9px -3px 3px black);
+            filter: brightness(0.5);
+
+.footer-main
+    margin: $margin-center;
+    max-width: $width;
+    background-color: #191919;
+
+.footer-content
+    max-width: $width-sm;
+    margin: $margin-center;
+    display: flex;
+    justify-content: center;
+
+    &-column //колонки
+        margin: 30px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+    &-column-widget
+        margin: 30px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    &-title //все заголовки
+        display: block;
+        text-align: center;
+        font-family: Raleway;
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: $color-norm;
+        text-transform: capitalize;
+
+    &-article //весь серый текст в колонках
+        margin: $mrgn-reset;
+        display: inline;
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        color: $color-grey;
+
+    &-date //все тэги времени
+        display: block;
+        &-txt //весь текст в тэгах времени
+            font-family: Montserrat;
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 300;
+            color: #363636;
+
+    &-twitter-twitt-name-link
+        color: #00bff3;
+    
+    &-links
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        color: #959595;
+        text-decoration: none;
+
+    &-about
+
+        &-read-more
+            margin: 35px 0 0 0;
+
+        &-read-more:hover
+            color: $color-pink;
+            fill: $color-pink;
+
+        &-read-more:active
+            color: $color-viol-light;
+            fill: $color-viol-light;
+        
+        &-txt
+            margin: $mrgn-reset;
+            font-family: Montserrat;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 300;
+            color: $color-grey;
+
+    &-recent-posts
+
+        &-item:hover .footer-content-article
+            color: $color-hover;
+
+        &-item:active .footer-content-article
+            color: $color-txt;
+
+        &-item:hover .footer-content-date-txt
+            color: $color-pink;
+
+        &-item:active .footer-content-date-txt
+            color: $color-viol-light;
+
+        &-item:first-of-type::after
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #252525;
+            margin: 20px auto;
+            // -ms-flex-item-align: end;
+            // align-self: flex-end;
+        
+        &-item:nth-of-type(2)::after
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #252525;
+            margin: 20px auto;
+            // -ms-flex-item-align: end;
+            // align-self: flex-end;
+
+        &-item-link
+            display: block;
+            text-decoration: none;
+
+    &-twitter
+        
+        &-twitt:hover .footer-content-article
+            color: $color-hover;
+
+        &-twitt:hover .footer-content-links
+           color: $color-pink;
+
+        &-twitt:hover .footer-content-twitter-twitt-name-link
+            color: $color-pink;
+
+        &-twitt:hover .footer-content-twitter-twitt-name-link:hover
+            color: $color-viol-dark;
+
+        &-twitt:hover .footer-content-twitter-twitt-name-link:active
+            color: $color-viol-light;
+
+        &-twitt:active .footer-content-article
+            color: $color-txt;
+
+        &-twitt:hover .footer-content-links:hover
+            color: $color-viol-dark;
+
+        &-twitt:hover .footer-content-links:active
+            color: $color-viol-light;
+
+        &-twitt:first-of-type::after
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #252525;
+            margin: 20px auto;
+            // -ms-flex-item-align: end;
+            // align-self: flex-end;
+        
+        &-twitt:nth-of-type(2)::after
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #252525;
+            margin: 20px auto;
+            // -ms-flex-item-align: end;
+            // align-self: flex-end;
+
+        &-twitt-link
+            text-decoration: none;
+
+        &-twitt-name-link
+            text-decoration: none;
+
+    &-widgets
+        &-link:nth-of-type(3)
+            margin: 5px 0 0 0;
+        &-link:nth-of-type(4)
+            margin: 5px 0 0 0;
+
+        &-link:hover
+            filter: brightness(.4);
+
+        &-link:active
+            filter: brightness(.1);
+
+.footer-content-twitter-twitt-link
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    color: $color-grey;
+    text-decoration: none;
+
+.footer-item
+    margin: 80px 30px 80px 0;
+    max-width: $width-sm / 4 - 20;
+
+    &:last-of-type
+        margin: 80px 0 80px 0;
+
+    &:first-of-type
+        margin: 63px 30px 80px 0;
+
+.footer-links
+    margin: $margin-center;
+    max-width: $width;
+    background-color: #111111;
+
+    &-txt
+        font-family: Montserrat;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 300;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: $color-grey;
+
+    &-wrp
+        margin: 0 auto;
+        max-width: $width-sm;
+        display: flex;
+        justify-content: space-between;
+
+        &-l
+            max-width: 50%;
+            display: flex;
+            justify-content: flex-start;
+
+            &-link-company
+                color: #959595;
+                margin: 0 0 0 3px;
+
+                &::after
+                    content: "|";
+                    display: inline-block;
+                    margin: 0 15px;
+                    color: #252525;
+
+                &:hover
+                    color: $color-pink;
+
+                &:active
+                    color: $color-viol-light;
+
+            &-link-privacy
+
+                &::after
+                    content: "|";
+                    display: inline-block;
+                    margin: 0 15px;
+                    color: #252525;
+
+                &:hover
+                    color: $color-hover;
+
+                &:active
+                    color: $color-txt;
+
+            &-link-faq
+                text-transform: uppercase;
+
+                &::after
+                    content: "|";
+                    display: inline-block;
+                    margin: 0 15px;
+                    color: #252525;
+
+                &:hover
+                    color: $color-hover;
+
+                &:active
+                    color: $color-txt;
+
+            &-link-support
+
+                &:hover
+                    color: $color-hover;
+
+                &:active
+                    color: $color-txt;
+
+        &-r
+            max-width: 50%;
+            display: flex;
+            justify-content: flex-end;
+
+            &-designer
+                margin: 0 0 0 3px;
+
+                &::after
+                    content: "|";
+                    display: inline-block;
+                    margin: 0 15px;
+                    color: #252525;
+
+                &:hover
+                    color: $color-pink;
+
+                &:active
+                    color: $color-viol-light;
+
+            &-marketplace
+                margin: 0 0 0 3px;
+
+                &:hover
+                    color: $color-pink;
+
+                &:active
+                    color: $color-viol-light;
+
+.footer-links-wrp-l, .footer-links-wrp-r
+    margin: 45px 0 50px 0;
+
+
+@import "_media"
